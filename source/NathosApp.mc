@@ -2,6 +2,7 @@
 
 using Toybox.Application;
 using Toybox.WatchUi as Ui;
+using Toybox.System as Sys;
 
 // This is the primary entry point of the application.
 class NathosWatch extends Application.AppBase
@@ -25,7 +26,9 @@ class NathosWatch extends Application.AppBase
     }
     
   function onSettingsChanged(){
+			Sys.println("a");
 			View.getSettings();
+			Sys.println("b");
 			Ui.requestUpdate();
 	}
     

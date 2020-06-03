@@ -1,200 +1,250 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <debugInfo>
     <pcToLineNum>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="3" lineNum="45" pc="268435456" symbol="initialize"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="3" lineNum="46" pc="268435460" symbol="initialize"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="4" lineNum="50" pc="268435479" symbol="getSettings"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="4" lineNum="51" pc="268435483" symbol="getSettings"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="4" lineNum="52" pc="268435500" symbol="getSettings"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="4" lineNum="53" pc="268435524" symbol="getSettings"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="4" lineNum="54" pc="268435548" symbol="getSettings"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="4" lineNum="55" pc="268435572" symbol="getSettings"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="4" lineNum="56" pc="268435596" symbol="getSettings"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="4" lineNum="57" pc="268435620" symbol="getSettings"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="4" lineNum="58" pc="268435644" symbol="getSettings"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="4" lineNum="59" pc="268435668" symbol="getSettings"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="5" lineNum="63" pc="268435672" symbol="onLayout"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="5" lineNum="64" pc="268435676" symbol="onLayout"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="5" lineNum="65" pc="268435688" symbol="onLayout"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="5" lineNum="66" pc="268435707" symbol="onLayout"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="5" lineNum="67" pc="268435726" symbol="onLayout"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="5" lineNum="69" pc="268435748" symbol="onLayout"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="5" lineNum="70" pc="268435770" symbol="onLayout"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="5" lineNum="72" pc="268435792" symbol="onLayout"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="5" lineNum="73" pc="268435809" symbol="onLayout"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="5" lineNum="79" pc="268435832" symbol="onLayout"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="5" lineNum="82" pc="268435875" symbol="onLayout"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="5" lineNum="83" pc="268435918" symbol="onLayout"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="6" lineNum="89" pc="268435962" symbol="onUpdate"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="6" lineNum="91" pc="268435966" symbol="onUpdate"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="6" lineNum="92" pc="268435988" symbol="onUpdate"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="6" lineNum="96" pc="268436000" symbol="onUpdate"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="6" lineNum="97" pc="268436014" symbol="onUpdate"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="6" lineNum="99" pc="268436031" symbol="onUpdate"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="6" lineNum="100" pc="268436045" symbol="onUpdate"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="6" lineNum="101" pc="268436059" symbol="onUpdate"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="6" lineNum="102" pc="268436073" symbol="onUpdate"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="6" lineNum="103" pc="268436087" symbol="onUpdate"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="7" lineNum="108" pc="268436102" symbol="drawComplication1"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="7" lineNum="110" pc="268436106" symbol="drawComplication1"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="7" lineNum="111" pc="268436129" symbol="drawComplication1"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="7" lineNum="112" pc="268436136" symbol="drawComplication1"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="7" lineNum="114" pc="268436178" symbol="drawComplication1"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="7" lineNum="115" pc="268436203" symbol="drawComplication1"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="7" lineNum="116" pc="268436265" symbol="drawComplication1"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="8" lineNum="121" pc="268436331" symbol="drawComplication2"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="8" lineNum="122" pc="268436335" symbol="drawComplication2"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="8" lineNum="123" pc="268436360" symbol="drawComplication2"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="8" lineNum="124" pc="268436360" symbol="drawComplication2"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="8" lineNum="125" pc="268436373" symbol="drawComplication2"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="8" lineNum="126" pc="268436441" symbol="drawComplication2"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="8" lineNum="127" pc="268436509" symbol="drawComplication2"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="9" lineNum="131" pc="268436513" symbol="getField2"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="9" lineNum="132" pc="268436517" symbol="getField2"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="10" lineNum="136" pc="268436567" symbol="drawLine"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="10" lineNum="137" pc="268436571" symbol="drawLine"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="10" lineNum="138" pc="268436596" symbol="drawLine"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="11" lineNum="142" pc="268436644" symbol="drawBattery"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="11" lineNum="143" pc="268436648" symbol="drawBattery"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="11" lineNum="144" pc="268436673" symbol="drawBattery"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="12" lineNum="147" pc="268436779" symbol="drawTime"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="12" lineNum="148" pc="268436783" symbol="drawTime"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="12" lineNum="150" pc="268436783" symbol="drawTime"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="12" lineNum="151" pc="268436827" symbol="drawTime"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="12" lineNum="152" pc="268436852" symbol="drawTime"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="12" lineNum="153" pc="268436979" symbol="drawTime"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="12" lineNum="154" pc="268437004" symbol="drawTime"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="12" lineNum="155" pc="268437086" symbol="drawTime"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="13" lineNum="158" pc="268437090" symbol="drawDate"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="13" lineNum="159" pc="268437094" symbol="drawDate"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="13" lineNum="160" pc="268437119" symbol="drawDate"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="13" lineNum="161" pc="268437119" symbol="drawDate"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="13" lineNum="162" pc="268437163" symbol="drawDate"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="13" lineNum="163" pc="268437221" symbol="drawDate"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="13" lineNum="164" pc="268437277" symbol="drawDate"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="13" lineNum="164" pc="268437280" symbol="drawDate"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosApp.mc" id="15" lineNum="10" pc="268437284" symbol="initialize"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosApp.mc" id="15" lineNum="11" pc="268437288" symbol="initialize"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosApp.mc" id="16" lineNum="14" pc="268437307" symbol="onStart"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosApp.mc" id="17" lineNum="17" pc="268437312" symbol="onStop"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosApp.mc" id="18" lineNum="20" pc="268437317" symbol="getInitialView"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosApp.mc" id="18" lineNum="21" pc="268437321" symbol="getInitialView"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosApp.mc" id="18" lineNum="22" pc="268437351" symbol="getInitialView"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosApp.mc" id="18" lineNum="23" pc="268437367" symbol="getInitialView"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosApp.mc" id="19" lineNum="27" pc="268437391" symbol="onSettingsChanged"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosApp.mc" id="19" lineNum="28" pc="268437395" symbol="onSettingsChanged"/>
-        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosApp.mc" id="19" lineNum="29" pc="268437413" symbol="onSettingsChanged"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/datafactory.mc" id="3" lineNum="3" pc="268435456" symbol="HeartRate"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/datafactory.mc" id="3" lineNum="4" pc="268435460" symbol="HeartRate"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/datafactory.mc" id="3" lineNum="5" pc="268435485" symbol="HeartRate"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/datafactory.mc" id="3" lineNum="6" pc="268435492" symbol="HeartRate"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/datafactory.mc" id="3" lineNum="8" pc="268435536" symbol="HeartRate"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/datafactory.mc" id="4" lineNum="11" pc="268435567" symbol="Steps"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/datafactory.mc" id="4" lineNum="12" pc="268435571" symbol="Steps"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/datafactory.mc" id="5" lineNum="15" pc="268435623" symbol="Calories"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/datafactory.mc" id="5" lineNum="16" pc="268435627" symbol="Calories"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/datafactory.mc" id="6" lineNum="19" pc="268435629" symbol="Altitude"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/datafactory.mc" id="6" lineNum="20" pc="268435633" symbol="Altitude"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/datafactory.mc" id="7" lineNum="23" pc="268435635" symbol="Stairs"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/datafactory.mc" id="7" lineNum="24" pc="268435639" symbol="Stairs"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/datafactory.mc" id="8" lineNum="27" pc="268435641" symbol="Battery"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/datafactory.mc" id="8" lineNum="28" pc="268435645" symbol="Battery"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/datafactory.mc" id="9" lineNum="31" pc="268435647" symbol="DateF"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/datafactory.mc" id="9" lineNum="32" pc="268435651" symbol="DateF"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="11" lineNum="53" pc="268435656" symbol="initialize"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="11" lineNum="54" pc="268435660" symbol="initialize"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="12" lineNum="58" pc="268435679" symbol="getSettings"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="12" lineNum="59" pc="268435683" symbol="getSettings"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="12" lineNum="60" pc="268435700" symbol="getSettings"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="12" lineNum="61" pc="268435724" symbol="getSettings"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="12" lineNum="62" pc="268435748" symbol="getSettings"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="12" lineNum="63" pc="268435772" symbol="getSettings"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="12" lineNum="64" pc="268435796" symbol="getSettings"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="12" lineNum="65" pc="268435820" symbol="getSettings"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="12" lineNum="66" pc="268435844" symbol="getSettings"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="12" lineNum="67" pc="268435868" symbol="getSettings"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="13" lineNum="71" pc="268435872" symbol="onLayout"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="13" lineNum="72" pc="268435876" symbol="onLayout"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="13" lineNum="73" pc="268435888" symbol="onLayout"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="13" lineNum="74" pc="268435907" symbol="onLayout"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="13" lineNum="75" pc="268435926" symbol="onLayout"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="13" lineNum="77" pc="268435948" symbol="onLayout"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="13" lineNum="78" pc="268435970" symbol="onLayout"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="13" lineNum="80" pc="268435992" symbol="onLayout"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="13" lineNum="81" pc="268436009" symbol="onLayout"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="13" lineNum="87" pc="268436032" symbol="onLayout"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="13" lineNum="90" pc="268436075" symbol="onLayout"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="13" lineNum="91" pc="268436118" symbol="onLayout"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="14" lineNum="97" pc="268436162" symbol="onUpdate"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="14" lineNum="99" pc="268436166" symbol="onUpdate"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="14" lineNum="100" pc="268436188" symbol="onUpdate"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="14" lineNum="104" pc="268436200" symbol="onUpdate"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="14" lineNum="105" pc="268436214" symbol="onUpdate"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="14" lineNum="107" pc="268436231" symbol="onUpdate"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="14" lineNum="108" pc="268436245" symbol="onUpdate"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="14" lineNum="109" pc="268436259" symbol="onUpdate"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="14" lineNum="110" pc="268436273" symbol="onUpdate"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="14" lineNum="111" pc="268436287" symbol="onUpdate"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="15" lineNum="116" pc="268436302" symbol="drawComplication1"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="15" lineNum="119" pc="268436306" symbol="drawComplication1"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="15" lineNum="120" pc="268436331" symbol="drawComplication1"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="15" lineNum="121" pc="268436356" symbol="drawComplication1"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="15" lineNum="122" pc="268436430" symbol="drawComplication1"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="16" lineNum="127" pc="268436505" symbol="drawComplication2"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="16" lineNum="128" pc="268436509" symbol="drawComplication2"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="16" lineNum="129" pc="268436534" symbol="drawComplication2"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="16" lineNum="130" pc="268436534" symbol="drawComplication2"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="16" lineNum="131" pc="268436553" symbol="drawComplication2"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="16" lineNum="132" pc="268436621" symbol="drawComplication2"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="16" lineNum="133" pc="268436689" symbol="drawComplication2"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="17" lineNum="138" pc="268436693" symbol="drawLine"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="17" lineNum="139" pc="268436697" symbol="drawLine"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="17" lineNum="140" pc="268436722" symbol="drawLine"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="18" lineNum="144" pc="268436770" symbol="drawBattery"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="18" lineNum="145" pc="268436774" symbol="drawBattery"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="18" lineNum="146" pc="268436799" symbol="drawBattery"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="19" lineNum="149" pc="268436905" symbol="drawTime"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="19" lineNum="150" pc="268436909" symbol="drawTime"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="19" lineNum="152" pc="268436909" symbol="drawTime"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="19" lineNum="153" pc="268436953" symbol="drawTime"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="19" lineNum="154" pc="268436978" symbol="drawTime"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="19" lineNum="155" pc="268437105" symbol="drawTime"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="19" lineNum="156" pc="268437130" symbol="drawTime"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="19" lineNum="157" pc="268437212" symbol="drawTime"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="20" lineNum="160" pc="268437216" symbol="drawDate"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="20" lineNum="161" pc="268437220" symbol="drawDate"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="20" lineNum="162" pc="268437245" symbol="drawDate"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="20" lineNum="163" pc="268437245" symbol="drawDate"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="20" lineNum="164" pc="268437289" symbol="drawDate"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="20" lineNum="165" pc="268437347" symbol="drawDate"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="20" lineNum="166" pc="268437403" symbol="drawDate"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosView.mc" id="20" lineNum="166" pc="268437406" symbol="drawDate"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosApp.mc" id="22" lineNum="11" pc="268437410" symbol="initialize"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosApp.mc" id="22" lineNum="12" pc="268437414" symbol="initialize"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosApp.mc" id="23" lineNum="15" pc="268437433" symbol="onStart"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosApp.mc" id="24" lineNum="18" pc="268437438" symbol="onStop"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosApp.mc" id="25" lineNum="21" pc="268437443" symbol="getInitialView"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosApp.mc" id="25" lineNum="22" pc="268437447" symbol="getInitialView"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosApp.mc" id="25" lineNum="23" pc="268437477" symbol="getInitialView"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosApp.mc" id="25" lineNum="24" pc="268437493" symbol="getInitialView"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosApp.mc" id="26" lineNum="28" pc="268437517" symbol="onSettingsChanged"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosApp.mc" id="26" lineNum="29" pc="268437521" symbol="onSettingsChanged"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosApp.mc" id="26" lineNum="30" pc="268437542" symbol="onSettingsChanged"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosApp.mc" id="26" lineNum="31" pc="268437560" symbol="onSettingsChanged"/>
+        <entry filename="/home/dev/dev-env/self/DRG-Nathos/source/NathosApp.mc" id="26" lineNum="32" pc="268437581" symbol="onSettingsChanged"/>
     </pcToLineNum>
     <symbolTable>
+        <entry id="73" symbol="Messages"/>
         <entry id="8389124" method="true" symbol="onUpdate"/>
-        <entry id="35" method="true" symbol="drawBattery"/>
+        <entry id="40" method="true" symbol="drawBattery"/>
         <entry id="8389184" method="true" symbol="drawLine"/>
         <entry id="8388631" module="true" symbol="Activity"/>
-        <entry field="true" id="29" symbol="scrWidth"/>
-        <entry field="true" id="54" symbol="gray"/>
+        <entry field="true" id="35" symbol="scrWidth"/>
+        <entry field="true" id="66" symbol="gray"/>
         <entry field="true" id="12" symbol="colBG"/>
-        <entry field="true" id="42" symbol="Minute"/>
+        <entry field="true" id="54" symbol="Minute"/>
         <entry field="true" id="8388611" module="true" symbol="Toybox"/>
         <entry id="8388645" module="true" symbol="Time"/>
-        <entry id="37" method="true" symbol="drawDate"/>
+        <entry id="42" method="true" symbol="drawDate"/>
         <entry id="10" object="true" symbol="NathosView"/>
+        <entry field="true" id="26" symbol="methodLeftBottom"/>
         <entry field="true" id="20" symbol="iconfont"/>
-        <entry field="true" id="44" symbol="colHour"/>
+        <entry field="true" id="56" symbol="colHour"/>
         <entry id="8388770" module="true" object="true" symbol="Strings"/>
-        <entry field="true" id="60" symbol="lightgray"/>
+        <entry field="true" id="72" symbol="lightgray"/>
         <entry field="true" id="22" symbol="showdate"/>
-        <entry id="34" method="true" symbol="getField2"/>
         <entry id="8389280" method="true" symbol="getInitialView"/>
+        <entry field="true" id="23" symbol="methodTop"/>
         <entry id="8388640" module="true" symbol="Lang"/>
-        <entry field="true" id="28" symbol="scrRadius"/>
+        <entry field="true" id="34" symbol="scrRadius"/>
         <entry id="8388639" module="true" symbol="Graphics"/>
-        <entry field="true" id="51" symbol="red"/>
+        <entry field="true" id="63" symbol="red"/>
         <entry id="8388769" module="true" object="true" symbol="Rez"/>
         <entry id="8388924" module="true" symbol="Gregorian"/>
-        <entry field="true" id="56" symbol="blue"/>
-        <entry field="true" id="58" symbol="colLine"/>
-        <entry id="33" method="true" symbol="drawComplication2"/>
-        <entry id="32" method="true" symbol="drawComplication1"/>
+        <entry field="true" id="68" symbol="blue"/>
+        <entry field="true" id="24" symbol="methodLeft"/>
+        <entry field="true" id="70" symbol="colLine"/>
+        <entry id="39" method="true" symbol="drawComplication2"/>
+        <entry id="38" method="true" symbol="drawComplication1"/>
         <entry id="8388702" method="true" symbol="initialize"/>
-        <entry field="true" id="48" symbol="colDate"/>
-        <entry field="true" id="50" symbol="AppName"/>
+        <entry field="true" id="60" symbol="colDate"/>
+        <entry field="true" id="62" symbol="AppName"/>
+        <entry id="43" method="true" symbol="HeartRate"/>
+        <entry field="true" id="25" symbol="methodRight"/>
         <entry id="8388641" module="true" symbol="Math"/>
-        <entry field="true" id="40" symbol="LauncherIcon"/>
-        <entry id="36" method="true" symbol="drawTime"/>
+        <entry field="true" id="52" symbol="LauncherIcon"/>
+        <entry id="45" method="true" symbol="Calories"/>
+        <entry id="41" method="true" symbol="drawTime"/>
         <entry id="8389683" method="true" symbol="onSettingsChanged"/>
+        <entry id="49" method="true" symbol="DateF"/>
         <entry id="8388648" module="true" symbol="WatchUi"/>
         <entry field="true" id="14" symbol="colHOUR"/>
         <entry id="8389281" method="true" symbol="onStop"/>
-        <entry field="true" id="26" symbol="minutefont"/>
+        <entry id="47" method="true" symbol="Stairs"/>
+        <entry field="true" id="32" symbol="minutefont"/>
         <entry id="8388771" module="true" object="true" symbol="Drawables"/>
         <entry id="8389122" method="true" symbol="onLayout"/>
-        <entry field="true" id="57" symbol="twelvehclock"/>
-        <entry field="true" id="41" symbol="Hour"/>
-        <entry field="true" id="49" symbol="colMin"/>
+        <entry field="true" id="69" symbol="twelvehclock"/>
+        <entry field="true" id="53" symbol="Hour"/>
+        <entry field="true" id="61" symbol="colMin"/>
         <entry id="8389279" method="true" symbol="onStart"/>
-        <entry field="true" id="25" symbol="hourfont"/>
-        <entry field="true" id="27" symbol="regfont"/>
-        <entry field="true" id="23" symbol="dayOfWeekArr"/>
+        <entry field="true" id="31" symbol="hourfont"/>
+        <entry field="true" id="33" symbol="regfont"/>
+        <entry field="true" id="29" symbol="dayOfWeekArr"/>
         <entry field="true" id="16" symbol="colLINE"/>
-        <entry field="true" id="43" symbol="Icon"/>
+        <entry field="true" id="55" symbol="Icon"/>
+        <entry field="true" id="27" symbol="methodRightBottom"/>
+        <entry id="46" method="true" symbol="Altitude"/>
         <entry field="true" id="13" symbol="colDATE"/>
         <entry field="true" id="19" symbol="barWidth"/>
-        <entry id="38" module="true" symbol="Layouts"/>
-        <entry field="true" id="59" symbol="anotherblue"/>
-        <entry field="true" id="52" symbol="orange"/>
+        <entry id="50" module="true" symbol="Layouts"/>
+        <entry field="true" id="71" symbol="anotherblue"/>
+        <entry field="true" id="64" symbol="orange"/>
         <entry field="true" id="18" symbol="barX"/>
-        <entry field="true" id="24" symbol="monthOfYearArr"/>
-        <entry field="true" id="30" symbol="scrHeight"/>
+        <entry field="true" id="30" symbol="monthOfYearArr"/>
+        <entry field="true" id="36" symbol="scrHeight"/>
         <entry field="true" id="8389023" object="true" symbol="View"/>
-        <entry field="true" id="47" symbol="yellow"/>
+        <entry field="true" id="59" symbol="yellow"/>
         <entry field="true" id="21" symbol="twlveclock"/>
+        <entry id="9" object="true" symbol="DataFactory"/>
+        <entry id="48" method="true" symbol="Battery"/>
         <entry id="8390088" module="true" object="true" symbol="JsonData"/>
-        <entry id="31" method="true" symbol="getSettings"/>
-        <entry field="true" id="46" symbol="anothergreen"/>
-        <entry field="true" id="53" symbol="yetanotherblue"/>
+        <entry id="37" method="true" symbol="getSettings"/>
+        <entry field="true" id="58" symbol="anothergreen"/>
+        <entry field="true" id="65" symbol="yetanotherblue"/>
         <entry field="true" id="17" symbol="colDatafield"/>
-        <entry id="39" module="true" symbol="Menus"/>
+        <entry id="51" module="true" symbol="Menus"/>
+        <entry id="44" method="true" symbol="Steps"/>
         <entry field="true" id="15" symbol="colMIN"/>
         <entry id="11" object="true" symbol="NathosWatch"/>
-        <entry field="true" id="9" symbol="partialUpdatesAllowed"/>
         <entry id="8388772" module="true" object="true" symbol="Fonts"/>
-        <entry field="true" id="45" symbol="green"/>
+        <entry field="true" id="57" symbol="green"/>
+        <entry field="true" id="28" symbol="methodBottomCenter"/>
         <entry id="8388633" module="true" symbol="ActivityMonitor"/>
         <entry id="8388635" module="true" symbol="Application"/>
-        <entry field="true" id="55" symbol="white"/>
+        <entry field="true" id="67" symbol="white"/>
     </symbolTable>
     <localVars>
-        <entry endPc="268435671" name="app" stackId="1" startPc="268435483"/>
-        <entry endPc="268435962" name="dc" stackId="1" startPc="268435672"/>
-        <entry endPc="268436102" name="dc" stackId="1" startPc="268435962"/>
-        <entry endPc="268436330" name="hr" stackId="2" startPc="268436106"/>
-        <entry endPc="268436331" name="dc" stackId="1" startPc="268436102"/>
-        <entry endPc="268436512" name="data" stackId="2" startPc="268436335"/>
-        <entry endPc="268436513" name="dc" stackId="1" startPc="268436331"/>
-        <entry endPc="268436644" name="dc" stackId="1" startPc="268436567"/>
-        <entry endPc="268436779" name="dc" stackId="1" startPc="268436644"/>
-        <entry endPc="268437089" name="time" stackId="2" startPc="268436783"/>
-        <entry endPc="268437090" name="dc" stackId="1" startPc="268436779"/>
-        <entry endPc="268437283" name="datestring" stackId="2" startPc="268437094"/>
-        <entry endPc="268437283" name="time" stackId="3" startPc="268437094"/>
-        <entry endPc="268437284" name="dc" stackId="1" startPc="268437090"/>
-        <entry endPc="268437312" name="state" stackId="1" startPc="268437307"/>
-        <entry endPc="268437317" name="state" stackId="1" startPc="268437312"/>
+        <entry endPc="268435566" name="hr" stackId="1" startPc="268435460"/>
+        <entry endPc="268435871" name="app" stackId="1" startPc="268435683"/>
+        <entry endPc="268436162" name="dc" stackId="1" startPc="268435872"/>
+        <entry endPc="268436302" name="dc" stackId="1" startPc="268436162"/>
+        <entry endPc="268436505" name="dc" stackId="1" startPc="268436302"/>
+        <entry endPc="268436692" name="data" stackId="2" startPc="268436509"/>
+        <entry endPc="268436693" name="dc" stackId="1" startPc="268436505"/>
+        <entry endPc="268436770" name="dc" stackId="1" startPc="268436693"/>
+        <entry endPc="268436905" name="dc" stackId="1" startPc="268436770"/>
+        <entry endPc="268437215" name="time" stackId="2" startPc="268436909"/>
+        <entry endPc="268437216" name="dc" stackId="1" startPc="268436905"/>
+        <entry endPc="268437409" name="datestring" stackId="2" startPc="268437220"/>
+        <entry endPc="268437409" name="time" stackId="3" startPc="268437220"/>
+        <entry endPc="268437410" name="dc" stackId="1" startPc="268437216"/>
+        <entry endPc="268437438" name="state" stackId="1" startPc="268437433"/>
+        <entry endPc="268437443" name="state" stackId="1" startPc="268437438"/>
     </localVars>
     <annotations/>
     <dataEntryOffsetMappings>
         <dataEntry offset="87" parentId="" symbolId="globals" type="module"/>
         <dataEntry offset="158" parentId="globals" symbolId="NathosView" type="class"/>
-        <dataEntry offset="437" parentId="globals" symbolId="Rez" type="module"/>
-        <dataEntry offset="516" parentId="Rez" symbolId="Drawables" type="module"/>
-        <dataEntry offset="555" parentId="Rez" symbolId="Menus" type="module"/>
-        <dataEntry offset="586" parentId="Rez" symbolId="Fonts" type="module"/>
-        <dataEntry offset="641" parentId="Rez" symbolId="Layouts" type="module"/>
-        <dataEntry offset="672" parentId="Rez" symbolId="JsonData" type="module"/>
-        <dataEntry offset="703" parentId="Rez" symbolId="Strings" type="module"/>
-        <dataEntry offset="886" parentId="globals" symbolId="NathosWatch" type="class"/>
+        <dataEntry offset="477" parentId="globals" symbolId="DataFactory" type="class"/>
+        <dataEntry offset="580" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry offset="659" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry offset="698" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry offset="729" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry offset="784" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry offset="815" parentId="Rez" symbolId="JsonData" type="module"/>
+        <dataEntry offset="846" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry offset="1029" parentId="globals" symbolId="NathosWatch" type="class"/>
     </dataEntryOffsetMappings>
     <functions>
+        <functionEntry accessMode="public" name="HeartRate" parent="DataFactory">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="Steps" parent="DataFactory">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="Calories" parent="DataFactory">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="Altitude" parent="DataFactory">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="Stairs" parent="DataFactory">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="Battery" parent="DataFactory">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="DateF" parent="DataFactory">
+            <documentation/>
+        </functionEntry>
         <functionEntry accessMode="public" name="initialize" parent="NathosView">
             <documentation/>
         </functionEntry>
@@ -215,9 +265,6 @@
         </functionEntry>
         <functionEntry accessMode="public" name="drawComplication2" parent="NathosView">
             <param id="dc"/>
-            <documentation/>
-        </functionEntry>
-        <functionEntry accessMode="public" name="getField2" parent="NathosView">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="drawLine" parent="NathosView">

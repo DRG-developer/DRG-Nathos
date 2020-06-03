@@ -5,12 +5,13 @@ using Toybox.System as Sys;
 using Toybox.Time;
 using Toybox.Time.Gregorian;
 using Toybox.WatchUi;
-using Toybox.Activity;
-using Toybox.ActivityMonitor;
 using Toybox.Application;
 using Toybox.System as Sys;
+using Toybox.Activity;
+using Toybox.ActivityMonitor;
 
-var partialUpdatesAllowed = false;
+
+
 
 
 class NathosView extends WatchUi.WatchFace
@@ -26,6 +27,13 @@ class NathosView extends WatchUi.WatchFace
 		var iconfont;
 		var twlveclock = false;
 		var showdate = true;
+		
+		var methodTop = method(:DateF);
+		var methodLeft = method(:Steps);
+		var methodRight = method(:HeartRate);
+		var methodLeftBottom = method(:Altitude);
+		var methodRightBottom = method(:Messages);
+		var methodBottomCenter = method(:Battery);
 		
 		var dayOfWeekArr    = [null, "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 		var monthOfYearArr  = [null, "January", "February", "March", "April", "May", "June", "July",
@@ -107,13 +115,11 @@ class NathosView extends WatchUi.WatchFace
 		
 		function drawComplication1(dc){
 			
-			var hr = Activity.getActivityInfo().currentHeartRate;
-			if(hr == null) {
-				hr = ActivityMonitor.getHeartRateHistory(1, true).next().heartRate;
-			}
+		
+			data = methodLeft.invoke();
 			dc.setColor(colDatafield, -1);
-			dc.drawText(scrRadius - 30, scrRadius + 25, regfont, hr, Graphics.TEXT_JUSTIFY_RIGHT);
-			dc.drawText(scrRadius - 5, scrRadius + 32, iconfont, "a", Graphics.TEXT_JUSTIFY_RIGHT);
+			dc.drawText(scrRadius - 30, scrRadius + 25, regfont, data[0], Graphics.TEXT_JUSTIFY_RIGHT);
+			dc.drawText(scrRadius - 5, scrRadius + 32, iconfont, data[1], Graphics.TEXT_JUSTIFY_RIGHT);
 					
 			
 		}
@@ -121,18 +127,14 @@ class NathosView extends WatchUi.WatchFace
 		function drawComplication2(dc){
 			dc.setColor(colDatafield, -1);
 			var data;
-			data = getField2();
+			data = methodRight.invoke();
 			dc.drawText(scrRadius + 30, scrRadius + 25, regfont, data[0], Graphics.TEXT_JUSTIFY_LEFT);
 			dc.drawText(scrRadius + 5, scrRadius + 32, iconfont, data[1], Graphics.TEXT_JUSTIFY_LEFT);
 			data = null;
 		
 		}
 		
-		function getField2() {
-				return [ActivityMonitor.getInfo().steps, "b"];
-		
-		}
-		
+
 		function drawLine(dc){
 			dc.setColor(colLINE, -1);
 			dc.fillRectangle(barX, scrRadius + 20, barWidth, 5);
@@ -143,7 +145,7 @@ class NathosView extends WatchUi.WatchFace
 				dc.setColor(colDatafield, -1);
 				dc.drawText(scrRadius, scrWidth - 30, regfont, ((Sys.getSystemStats().battery + 0.5).toNumber().toString() + "%"), Graphics.TEXT_JUSTIFY_CENTER);
 		}
-		
+		 
 		function drawTime(dc){
 			var time;
 			
