@@ -2,6 +2,6 @@
     <fonts>
         <font id="Hour" antialias="true" filename="fonts/90px-ariel-bold.fnt" filter="0123456789" />
         <font id="Minute" antialias="true" filename="fonts/90px-ariel.fnt" filter="0123456789" />
-        <font id="Icon" antialias="true" filename="fonts/icons.fnt" filter="ab" />
+        <font id="Icon" antialias="true" filename="fonts/icons.fnt" filter="abcdefg " />
     </fonts>
 </resources>

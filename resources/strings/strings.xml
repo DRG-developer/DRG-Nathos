@@ -4,6 +4,7 @@
     <string id="colHour">hour color</string>    
     <string id="colMin">minute color</string>    
     <string id="colLine">seperator color</string>    
+    <string id="colBg">background color</string>    
     <string id="colDatafield"> datafield colors</string>    
     <string id="colDate"> date color</string>    
     <string id="gray"> dark gray </string>    
@@ -18,7 +19,20 @@
     <string id="anotherblue"> another blue </string>   
     <string id="yetanotherblue"> yet another blue </string>   
     <string id="showdate"> show the date </string>   
-    
+    <string id="shortdate"> make the date string shorter </string>   
+	<string id="Field1">top left field </string>
+	<string id="Field2">bottom left field </string>
+	<string id="Field3">top right field </string>
+	<string id="Field4">bottom right field </string>
+	<string id="Field5">bottom center field </string>
+	<string id="HeartRate"> CurrentHeartrate </string>
+	<string id="Steps"> Steps </string>
+	<string id="Calories"> Calories burned</string>
+	<string id="Altitude"> Altitude </string>
+	<string id="Stairs"> Stairs climbed</string>
+	<string id="Messages"> Amount of notifications </string>
+	<string id="Battery">Battery percentage</string>
+	<string id="Empty">show nothing</string>
     
     
      

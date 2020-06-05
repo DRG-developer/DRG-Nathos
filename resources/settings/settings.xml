@@ -79,12 +79,101 @@
 		</settingConfig>
 	</setting>
 	
+	<setting propertyKey="@Properties.colBg" title="@Strings.colBg">
+		<settingConfig type="list">
+			<listEntry value="5592405">@Strings.gray</listEntry>
+			<listEntry value="11184810">@Strings.lightgray</listEntry>
+			<listEntry value="16777215">@Strings.white</listEntry>
+			<listEntry value="16776960">@Strings.yellow</listEntry>
+			<listEntry value="16711680">@Strings.red</listEntry>	
+			<listEntry value="65280">@Strings.green</listEntry>	
+			<listEntry value="11206400">@Strings.anothergreen</listEntry>	
+			<listEntry value="255">@Strings.blue</listEntry>	
+			<listEntry value="43775">@Strings.anotherblue</listEntry>	
+			<listEntry value="5636095">@Strings.yetanotherblue</listEntry>	
+			<listEntry value="16733440">@Strings.orange</listEntry>			
+		</settingConfig>
+	</setting>
+	
+	
+	<setting propertyKey="@Properties.Field1" title="@Strings.Field1">
+		<settingConfig type="list">
+			<listEntry value="0">@Strings.HeartRate</listEntry>	
+			<listEntry value="1">@Strings.Steps</listEntry>	
+			<listEntry value="2">@Strings.Calories</listEntry>	
+			<listEntry value="3">@Strings.Altitude</listEntry>	
+			<listEntry value="4">@Strings.Battery</listEntry>	
+			<listEntry value="5">@Strings.Stairs</listEntry>	
+			<listEntry value="6">@Strings.Messages</listEntry>
+			<listEntry value="7">@Strings.Empty</listEntry>			
+		</settingConfig>
+	</setting>
+	
+	<setting propertyKey="@Properties.Field2" title="@Strings.Field2">
+		<settingConfig type="list">
+			<listEntry value="0">@Strings.HeartRate</listEntry>	
+			<listEntry value="1">@Strings.Steps</listEntry>	
+			<listEntry value="2">@Strings.Calories</listEntry>	
+			<listEntry value="3">@Strings.Altitude</listEntry>	
+			<listEntry value="4">@Strings.Battery</listEntry>	
+			<listEntry value="5">@Strings.Stairs</listEntry>	
+			<listEntry value="6">@Strings.Messages</listEntry>	
+			<listEntry value="7">@Strings.Empty</listEntry>		
+		</settingConfig>
+	</setting>
+	
+	<setting propertyKey="@Properties.Field3" title="@Strings.Field3">
+		<settingConfig type="list">
+			<listEntry value="0">@Strings.HeartRate</listEntry>	
+			<listEntry value="1">@Strings.Steps</listEntry>	
+			<listEntry value="2">@Strings.Calories</listEntry>	
+			<listEntry value="3">@Strings.Altitude</listEntry>	
+			<listEntry value="4">@Strings.Battery</listEntry>	
+			<listEntry value="5">@Strings.Stairs</listEntry>	
+			<listEntry value="6">@Strings.Messages</listEntry>	
+			<listEntry value="7">@Strings.Empty</listEntry>	
+		</settingConfig>
+	</setting>
+	
+	<setting propertyKey="@Properties.Field4" title="@Strings.Field4">
+		<settingConfig type="list">
+			<listEntry value="0">@Strings.HeartRate</listEntry>	
+			<listEntry value="1">@Strings.Steps</listEntry>	
+			<listEntry value="2">@Strings.Calories</listEntry>	
+			<listEntry value="3">@Strings.Altitude</listEntry>	
+			<listEntry value="4">@Strings.Battery</listEntry>	
+			<listEntry value="5">@Strings.Stairs</listEntry>	
+			<listEntry value="6">@Strings.Messages</listEntry>	
+			<listEntry value="7">@Strings.Empty</listEntry>	
+		</settingConfig>
+	</setting>
+	
+	<setting propertyKey="@Properties.Field5" title="@Strings.Field5">
+		<settingConfig type="list">
+			<listEntry value="0">@Strings.HeartRate</listEntry>	
+			<listEntry value="1">@Strings.Steps</listEntry>	
+			<listEntry value="2">@Strings.Calories</listEntry>	
+			<listEntry value="3">@Strings.Altitude</listEntry>	
+			<listEntry value="4">@Strings.Battery</listEntry>	
+			<listEntry value="5">@Strings.Stairs</listEntry>	
+			<listEntry value="6">@Strings.Messages</listEntry>	
+			<listEntry value="7">@Strings.Empty</listEntry>	
+		</settingConfig>
+	</setting>
+	
+	
 	<setting propertyKey="@Properties.twelvehclock" title="@Strings.twelvehclock">
 		<settingConfig type="boolean"></settingConfig>
 	</setting>
+	
 	<setting propertyKey="@Properties.showdate" title="@Strings.showdate">
 		<settingConfig type="boolean"></settingConfig>
 	</setting>
+	
+	<setting propertyKey="@Properties.shortdate" title="@Strings.shortdate">
+		<settingConfig type="boolean"></settingConfig>
+	</setting>
+	
 	
 	
 	

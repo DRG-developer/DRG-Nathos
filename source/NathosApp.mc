@@ -30,6 +30,7 @@ class NathosWatch extends Application.AppBase
 			View.getSettings();
 			Sys.println("b");
 			Ui.requestUpdate();
+			return;
 	}
     
 }
