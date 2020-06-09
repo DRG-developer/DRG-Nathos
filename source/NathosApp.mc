@@ -25,10 +25,8 @@ class NathosWatch extends Application.AppBase
         
     }
     
-  function onSettingsChanged(){
-			Sys.println("a");
+  function onSettingsChanged(){	
 			View.getSettings();
-			Sys.println("b");
 			Ui.requestUpdate();
 			return;
 	}

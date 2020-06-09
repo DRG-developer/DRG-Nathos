@@ -1,6 +1,7 @@
 <settings>	
 	<setting propertyKey="@Properties.colHour" title="@Strings.colHour">
 		<settingConfig type="list">
+			<listEntry value="0">@Strings.black</listEntry>
 			<listEntry value="5592405">@Strings.gray</listEntry>
 			<listEntry value="11184810">@Strings.lightgray</listEntry>
 			<listEntry value="16777215">@Strings.white</listEntry>	
@@ -17,6 +18,7 @@
 	
 	<setting propertyKey="@Properties.colMin" title="@Strings.colMin">
 		<settingConfig type="list">
+			<listEntry value="0">@Strings.black</listEntry>
 			<listEntry value="5592405">@Strings.gray</listEntry>
 			<listEntry value="11184810">@Strings.lightgray</listEntry>
 			<listEntry value="16777215">@Strings.white</listEntry>	
@@ -33,6 +35,7 @@
 	
 	<setting propertyKey="@Properties.colDatafield" title="@Strings.colDatafield">
 		<settingConfig type="list">
+			<listEntry value="0">@Strings.black</listEntry>
 			<listEntry value="5592405">@Strings.gray</listEntry>
 			<listEntry value="11184810">@Strings.lightgray</listEntry>
 			<listEntry value="16777215">@Strings.white</listEntry>	
@@ -49,6 +52,7 @@
 	
 	<setting propertyKey="@Properties.colDate" title="@Strings.colDate">
 		<settingConfig type="list">
+			<listEntry value="0">@Strings.black</listEntry>
 			<listEntry value="5592405">@Strings.gray</listEntry>
 			<listEntry value="11184810">@Strings.lightgray</listEntry>
 			<listEntry value="16777215">@Strings.white</listEntry>
@@ -65,6 +69,7 @@
 	
 	<setting propertyKey="@Properties.colLine" title="@Strings.colLine">
 		<settingConfig type="list">
+			<listEntry value="0">@Strings.black</listEntry>
 			<listEntry value="5592405">@Strings.gray</listEntry>
 			<listEntry value="11184810">@Strings.lightgray</listEntry>
 			<listEntry value="16777215">@Strings.white</listEntry>
@@ -81,6 +86,7 @@
 	
 	<setting propertyKey="@Properties.colBg" title="@Strings.colBg">
 		<settingConfig type="list">
+			<listEntry value="0">@Strings.black</listEntry>
 			<listEntry value="5592405">@Strings.gray</listEntry>
 			<listEntry value="11184810">@Strings.lightgray</listEntry>
 			<listEntry value="16777215">@Strings.white</listEntry>
@@ -98,66 +104,96 @@
 	
 	<setting propertyKey="@Properties.Field1" title="@Strings.Field1">
 		<settingConfig type="list">
+			<listEntry value="-1">@Strings.Empty</listEntry>	
 			<listEntry value="0">@Strings.HeartRate</listEntry>	
-			<listEntry value="1">@Strings.Steps</listEntry>	
-			<listEntry value="2">@Strings.Calories</listEntry>	
+			<listEntry value="1">@Strings.Calories</listEntry>	
+			<listEntry value="2">@Strings.Steps</listEntry>
 			<listEntry value="3">@Strings.Altitude</listEntry>	
 			<listEntry value="4">@Strings.Battery</listEntry>	
 			<listEntry value="5">@Strings.Stairs</listEntry>	
 			<listEntry value="6">@Strings.Messages</listEntry>
-			<listEntry value="7">@Strings.Empty</listEntry>			
+			<listEntry value="7">@Strings.AlarmCount</listEntry>		
+			<listEntry value="8">@Strings.Bluetooth</listEntry>		
+			<listEntry value="9">@Strings.ActiveMinDay</listEntry>		
+			<listEntry value="10">@Strings.ActiveMinWeek</listEntry>		
+			<listEntry value="11">@Strings.daydistance</listEntry>	
+			<listEntry value="12">@Strings.devicetemp</listEntry>
 		</settingConfig>
 	</setting>
 	
 	<setting propertyKey="@Properties.Field2" title="@Strings.Field2">
 		<settingConfig type="list">
+			<listEntry value="-1">@Strings.Empty</listEntry>	
 			<listEntry value="0">@Strings.HeartRate</listEntry>	
-			<listEntry value="1">@Strings.Steps</listEntry>	
-			<listEntry value="2">@Strings.Calories</listEntry>	
+			<listEntry value="1">@Strings.Calories</listEntry>	
+			<listEntry value="2">@Strings.Steps</listEntry>		
 			<listEntry value="3">@Strings.Altitude</listEntry>	
 			<listEntry value="4">@Strings.Battery</listEntry>	
 			<listEntry value="5">@Strings.Stairs</listEntry>	
 			<listEntry value="6">@Strings.Messages</listEntry>	
-			<listEntry value="7">@Strings.Empty</listEntry>		
+			<listEntry value="7">@Strings.AlarmCount</listEntry>		
+			<listEntry value="8">@Strings.Bluetooth</listEntry>		
+			<listEntry value="9">@Strings.ActiveMinDay</listEntry>		
+			<listEntry value="10">@Strings.ActiveMinWeek</listEntry>		
+			<listEntry value="11">@Strings.daydistance</listEntry>	
+			<listEntry value="12">@Strings.devicetemp</listEntry>	
 		</settingConfig>
 	</setting>
 	
 	<setting propertyKey="@Properties.Field3" title="@Strings.Field3">
 		<settingConfig type="list">
-			<listEntry value="0">@Strings.HeartRate</listEntry>	
-			<listEntry value="1">@Strings.Steps</listEntry>	
-			<listEntry value="2">@Strings.Calories</listEntry>	
+			<listEntry value="-1">@Strings.Empty</listEntry>	
+			<listEntry value="0">@Strings.HeartRate</listEntry>
+			<listEntry value="1">@Strings.Calories</listEntry>	
+			<listEntry value="2">@Strings.Steps</listEntry>		
 			<listEntry value="3">@Strings.Altitude</listEntry>	
 			<listEntry value="4">@Strings.Battery</listEntry>	
 			<listEntry value="5">@Strings.Stairs</listEntry>	
 			<listEntry value="6">@Strings.Messages</listEntry>	
-			<listEntry value="7">@Strings.Empty</listEntry>	
+			<listEntry value="7">@Strings.AlarmCount</listEntry>		
+			<listEntry value="8">@Strings.Bluetooth</listEntry>		
+			<listEntry value="9">@Strings.ActiveMinDay</listEntry>		
+			<listEntry value="10">@Strings.ActiveMinWeek</listEntry>		
+			<listEntry value="11">@Strings.daydistance</listEntry>
+			<listEntry value="12">@Strings.devicetemp</listEntry>	
 		</settingConfig>
 	</setting>
 	
 	<setting propertyKey="@Properties.Field4" title="@Strings.Field4">
 		<settingConfig type="list">
+			<listEntry value="-1">@Strings.Empty</listEntry>
 			<listEntry value="0">@Strings.HeartRate</listEntry>	
-			<listEntry value="1">@Strings.Steps</listEntry>	
-			<listEntry value="2">@Strings.Calories</listEntry>	
+			<listEntry value="1">@Strings.Calories</listEntry>	
+			<listEntry value="2">@Strings.Steps</listEntry>	
 			<listEntry value="3">@Strings.Altitude</listEntry>	
 			<listEntry value="4">@Strings.Battery</listEntry>	
 			<listEntry value="5">@Strings.Stairs</listEntry>	
 			<listEntry value="6">@Strings.Messages</listEntry>	
-			<listEntry value="7">@Strings.Empty</listEntry>	
+			<listEntry value="7">@Strings.AlarmCount</listEntry>		
+			<listEntry value="8">@Strings.Bluetooth</listEntry>		
+			<listEntry value="9">@Strings.ActiveMinDay</listEntry>		
+			<listEntry value="10">@Strings.ActiveMinWeek</listEntry>		
+			<listEntry value="11">@Strings.daydistance</listEntry>	
+			<listEntry value="12">@Strings.devicetemp</listEntry>		
 		</settingConfig>
 	</setting>
 	
 	<setting propertyKey="@Properties.Field5" title="@Strings.Field5">
 		<settingConfig type="list">
+			<listEntry value="-1">@Strings.Empty</listEntry>	
 			<listEntry value="0">@Strings.HeartRate</listEntry>	
 			<listEntry value="1">@Strings.Steps</listEntry>	
 			<listEntry value="2">@Strings.Calories</listEntry>	
 			<listEntry value="3">@Strings.Altitude</listEntry>	
 			<listEntry value="4">@Strings.Battery</listEntry>	
 			<listEntry value="5">@Strings.Stairs</listEntry>	
-			<listEntry value="6">@Strings.Messages</listEntry>	
-			<listEntry value="7">@Strings.Empty</listEntry>	
+			<listEntry value="6">@Strings.Messages</listEntry>		
+			<listEntry value="7">@Strings.AlarmCount</listEntry>		
+			<listEntry value="8">@Strings.Bluetooth</listEntry>		
+			<listEntry value="9">@Strings.ActiveMinDay</listEntry>		
+			<listEntry value="10">@Strings.ActiveMinWeek</listEntry>		
+			<listEntry value="11">@Strings.daydistance</listEntry>		
+			<listEntry value="12">@Strings.devicetemp</listEntry>		
 		</settingConfig>
 	</setting>
 	
@@ -171,6 +207,14 @@
 	</setting>
 	
 	<setting propertyKey="@Properties.shortdate" title="@Strings.shortdate">
+		<settingConfig type="boolean"></settingConfig>
+	</setting>
+	
+	<setting propertyKey="@Properties.BtIndicator" title="@Strings.BtIndicator">
+		<settingConfig type="boolean"></settingConfig>
+	</setting>
+	
+	<setting propertyKey="@Properties.zeroformat" title="@Strings.zeroformat">
 		<settingConfig type="boolean"></settingConfig>
 	</setting>
 	

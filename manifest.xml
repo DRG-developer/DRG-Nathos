@@ -12,7 +12,11 @@
             <iq:product id="fenix5splus"/>  <!-- tested in sim -->
             <iq:product id="fenix5plus"/>  <!-- tested in sim --> <!-- tested irl (by me) -->
             <iq:product id="fenix5xplus"/>  <!-- tested in sim -->
+            
+            
+            <!-- fenix 3 series-->
             <iq:product id="fenix3_hr"/>  <!-- tested in sim -->
+            <iq:product id="fenix3"/>  <!-- tested in sim -->
             
             
             <!-- descent series -->
@@ -58,9 +62,11 @@
 			<iq:product id="fr935"/> <!-- tested in sim -->
 			<iq:product id="fr645m"/> <!-- tested in sim -->
 			<iq:product id="fr645"/>  <!-- tested in sim -->
+			<iq:product id="fr630"/>  <!-- tested in sim -->
             <iq:product id="fr245m"/>  <!-- tested in sim -->
             <iq:product id="fr245"/>  <!-- tested in sim -->
             <iq:product id="fr235"/>  <!-- tested in sim -->
+            <iq:product id="fr230"/>  <!-- tested in sim -->
 	          
             
             
@@ -74,7 +80,8 @@
             <iq:product id="marqexpedition"/> <!-- tested in sim -->
             
             <!-- non sport watches (read: golf watches XD )-->
-		    <iq:product id="approachs62"/> -->
+		    <iq:product id="approachs62"/> 
+		    <iq:product id="approachs60"/> 
 			
 			<!--  misc-->
 			<iq:product id="fenixchronos"/> <!-- tested in sim -->

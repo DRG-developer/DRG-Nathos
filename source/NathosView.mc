@@ -20,12 +20,30 @@ class NathosView extends WatchUi.WatchFace
 		var colMIN 	 	 = 0x555555;
 		var colLINE 	 = 0x555555;
 		var colDatafield = 0x555555;
-		var info, data;
+		var info, data, settings, value, BtInd, zeroformat;
 		var barX, barWidth;
 		var iconfont;
 		var twlveclock = false;
 		var showdate = true;
-		var methodTop = method(:DateF);
+		
+		/* ICONS MAPPER*/
+		
+		
+		/*
+		 * HEARTRATE:      A
+		 * CALORIES:       B
+		 * STEPS:          C
+		 * ALTITUDE:       D
+		 * MESSAGES:       E
+		 * STAIRS:         F
+		 * ALARM COUNT:    G
+		 * BLUETOOTH:      H
+		 * ACTIVE MINUTES: I
+		 * BATTERY:        J
+		 * DISTANCE WEEK:  K
+		 * */
+		
+		
 		var methodLeft = method(:Steps);
 		var methodRight = method(:HeartRate);
 		var methodLeftBottom = method(:Battery);
@@ -61,8 +79,10 @@ class NathosView extends WatchUi.WatchFace
 			colBG   = app.getProperty("colBg");
 			colDATE = app.getProperty("colDate");
 			colDatafield = app.getProperty("colDatafield");
-			twlveclock = app.getProperty("twelvehclock");
-			showdate = app.getProperty("showdate");
+			twlveclock   = app.getProperty("twelvehclock");
+			showdate     = app.getProperty("showdate");
+			BtInd        = app.getProperty("BtIndicator");
+			zeroformat   = app.getProperty("zeroformat");
 		    methodLeft         = getField(app.getProperty("Field1"));
 			methodLeftBottom   = getField(app.getProperty("Field2"));
 			methodRight        = getField(app.getProperty("Field3"));
@@ -78,31 +98,66 @@ class NathosView extends WatchUi.WatchFace
 			
 		}
 		
-		function getField(value){
-			if (value == 0) {
-				return method(:HeartRate);
-			} else if (value == 1){
-				return method(:Steps);
-			} else if (value == 2){
+		function getField(values){
+			if (values == -1) {
+				return method(:EmptyF);
+			}
+			if (values == 0) {
+				if (info has :getHeartRateHistory) {
+					return method(:HeartRate);
+				} else {
+					return method(:Invalid);
+				}
+			} else if (values == 1){
 				return method(:Calories);
-			} else if (value == 3){
+				
+			} else if (values == 2){
+				return method(:Steps);
+				
+			} else if (values == 3){
 				if ( (Toybox has :SensorHistory) && (Toybox.SensorHistory has :getElevationHistory)) {
 					return method(:Altitude);
 				} else {
 					return method(:Invalid);
 				} 
-			} else if (value == 4){
+				
+			} else if (values == 4){
 				return method(:Battery);
-			} else if (value == 5){
-				if (Toybox.ActivityMonitor has :floorsClimbed) {
+				
+			} else if (values == 5){
+				if (info has :floorsClimbed) {
 					return method(:Stairs);
 				} else {
 					return method(:Invalid);
 				}
-			} else if (value == 6){
+				
+			} else if (values == 6){
 				return method(:Messages);
-			} else {
-				return method(:EmptyF);
+				
+			} else if (values == 7){
+				return method(:Alarmcount);
+			} else if (values == 8){
+				return method(:PhoneConn);
+			} else if (values == 9){
+				if (info has :activeMinutesWeek){
+					return method(:ActiveMinutesDay);
+				} else {
+					return method(:Invalid);
+				}
+			} else if (values == 10){
+				if (info has :activeminutesWeek){
+					return method(:ActiveMinutesWeek);
+				} else {
+					return method(:Invalid);
+				}
+			} else if (values == 11){
+				return method(:DistanceDay);
+			} else if (values == 12) {
+				if ((Toybox has :SensorHistory) && (Toybox.SensorHistory has :getTemperatureHistory)) {
+					return method(:DeviceTemp);
+				} else{
+					 return method(:Invalid);
+				}
 			}
 		}
 		
@@ -119,33 +174,29 @@ class NathosView extends WatchUi.WatchFace
 					regfont = Graphics.FONT_MEDIUM;
 			}
 			
-			
-			
-			
 			iconfont = WatchUi.loadResource(Rez.Fonts.Icon);
-			
-			
-				hourfont = WatchUi.loadResource(Rez.Fonts.Hour);
-				minutefont = WatchUi.loadResource(Rez.Fonts.Minute);
-
-			
-	
+			hourfont = WatchUi.loadResource(Rez.Fonts.Hour);
+			minutefont = WatchUi.loadResource(Rez.Fonts.Minute);
 		}
 		
 		function onUpdate(dc){
-		
-			dc.setColor(0, 0);
-			dc.clear();
-			
-			
+			dc.setColor(0, colBG);
+			dc.clear();		
+			info     = ActivityMonitor.getInfo();
+			settings = Sys.getDeviceSettings();
 			
 			if(showdate == true){
 				drawDate(dc);
 			}
+
 			
-			info = ActivityMonitor.getInfo();
 			drawTime(dc);
 			drawLine(dc);
+			dc.setColor(colDatafield, -1);
+			if(BtInd == true && settings.phoneConnected){
+				dc.drawText(scrRadius, 20, iconfont, "h", Graphics.TEXT_JUSTIFY_CENTER);
+			}
+			
 			drawComplication1(dc);
 			drawComplication2(dc);
 			drawComplication3(dc);
@@ -155,44 +206,34 @@ class NathosView extends WatchUi.WatchFace
 		}
 		
 		
-		function drawComplication1(dc){
-			
-		
-			 data = methodRight.invoke();
-			dc.setColor(colDatafield, -1);
+		function drawComplication1(dc){	
+			data = methodRight.invoke();
 			dc.drawText(scrRadius - 30, scrRadius + 25, regfont, data[0], Graphics.TEXT_JUSTIFY_RIGHT);
-			dc.drawText(scrRadius - 5, scrRadius + 32, iconfont, data[1], Graphics.TEXT_JUSTIFY_RIGHT);
-					
-			
+			dc.drawText(scrRadius - 5, scrRadius + 32, iconfont, data[1], Graphics.TEXT_JUSTIFY_RIGHT);	
 		}
+		
 		
 		function drawComplication2(dc){
-			dc.setColor(colDatafield, -1);
-			 data = methodLeft.invoke();
+			data = methodLeft.invoke();
 			dc.drawText(scrRadius + 30, scrRadius + 25, regfont, data[0], Graphics.TEXT_JUSTIFY_LEFT);
 			dc.drawText(scrRadius + 5, scrRadius + 32, iconfont, data[1], Graphics.TEXT_JUSTIFY_LEFT);
-			data = null;	
 		}
+		
 		
 		function drawComplication3(dc){
-			dc.setColor(colDatafield, -1);
-			 data = methodLeftBottom.invoke();
+			data = methodLeftBottom.invoke();
 			dc.drawText(scrRadius - 30, scrRadius + 48, regfont, data[0], Graphics.TEXT_JUSTIFY_RIGHT);
 			dc.drawText(scrRadius - 5, scrRadius + 55, iconfont, data[1], Graphics.TEXT_JUSTIFY_RIGHT);
-			data = null;	
 		}
 		
+		
 		function drawComplication4(dc){
-			dc.setColor(colDatafield, -1);
-			 data = methodRightBottom.invoke();
+			data = methodRightBottom.invoke();
 			dc.drawText(scrRadius + 30, scrRadius + 48, regfont, data[0], Graphics.TEXT_JUSTIFY_LEFT);
-			dc.drawText(scrRadius + 5, scrRadius + 55, iconfont, data[1], Graphics.TEXT_JUSTIFY_LEFT);
-			data = null;	
+			dc.drawText(scrRadius + 5, scrRadius + 55, iconfont, data[1], Graphics.TEXT_JUSTIFY_LEFT);			
 		}
 		
 	
-		
-
 		function drawLine(dc){
 			dc.setColor(colLINE, -1);
 			dc.fillRectangle(barX, scrRadius + 20, barWidth, 5);
@@ -200,9 +241,9 @@ class NathosView extends WatchUi.WatchFace
 		
 		
 		function drawBattery(dc){
-				dc.setColor(colDatafield, -1);
 				data = methodBottomCenter.invoke();
 				dc.drawText(scrRadius, scrWidth - 30, regfont, data[0], Graphics.TEXT_JUSTIFY_CENTER);
+				data = null;
 		}
 		 
 		function drawTime(dc){
@@ -210,10 +251,14 @@ class NathosView extends WatchUi.WatchFace
 			
 			time = Gregorian.info(Time.now(), Time.FORMAT_MEDIUM);
 			dc.setColor(colHOUR, -1);
-			dc.drawText(scrRadius -2, scrRadius - 60, hourfont, (twlveclock == false ? time.hour : (time.hour > 11 ? time.hour - 12 : time.hour)), Graphics.TEXT_JUSTIFY_RIGHT);
+			var tmp = (twlveclock == false ? time.hour : (time.hour > 12 ? time.hour - 12 : time.hour));
+			if (zeroformat == true){
+				tmp = tmp.format("%02d");
+			}
+			dc.drawText(scrRadius -2, scrRadius - 60, hourfont, tmp, Graphics.TEXT_JUSTIFY_RIGHT);
 			dc.setColor(colMIN, -1);
 			dc.drawText(scrRadius + 2, scrRadius - 60, minutefont, time.min.format("%02d"), Graphics.TEXT_JUSTIFY_LEFT);
-			time = null;
+			time = null; tmp = null;
 		}
 		
 		function drawDate(dc){
@@ -226,75 +271,140 @@ class NathosView extends WatchUi.WatchFace
 		}
 		
 		
-		
+	
+	
+	
+	// DATAFIELDS	
 		
 	function HeartRate(){
-		var hr = Activity.getActivityInfo().currentHeartRate;
-		if(hr == null) {
-			hr = ActivityMonitor.getHeartRateHistory(1, true).next().heartRate;
+		value = Activity.getActivityInfo().currentHeartRate;
+		if(value == null) {
+			value = ActivityMonitor.getHeartRateHistory(1, true).next().heartRate;
 		}
-		return [hr, "a"];
+		return [value, "a"];
 	}
 	
-	function Steps(){
-		return [info.steps , "b"];
-	}
 	
 	function Calories(){
-		return [info.calories, "c" ];
+		return [info.calories, "b" ];
 	}
 	
+	
+	function Steps(){
+		return [info.steps , "c"];
+	}
+	
+
 	function Altitude(){
-		var altitude = Activity.getActivityInfo().altitude;
-		if(altitude == null){
-			var sample = SensorHistory.getElevationHistory({ :period => 1, :order => SensorHistory.ORDER_NEWEST_FIRST })
+		var value = Activity.getActivityInfo().altitude;
+		if(value == null){
+			 value = SensorHistory.getElevationHistory({ :period => 1, :order => SensorHistory.ORDER_NEWEST_FIRST })
 						.next();
-			if ((sample != null) && (sample.data != null)) {
-					altitude = sample.data;
+			if ((value != null) && (value.data != null)) {
+					value = value.data;
 			}
 		}
-		if (altitude != null) {
+		if (value != null) {
 
 			// Metres (no conversion necessary).
-			if (Sys.getDeviceSettings().elevationUnits == System.UNIT_METRIC) {
-					altitude = (altitude.toString() +  "m");
+			if (settings.elevationUnits == System.UNIT_METRIC) {
+				value = value.toNumber();
 			} else { // then its feen
-				altitude *=  3.28084; // every meter is 3.28 feet		
-				altitude = (altitude.toString() + "ft");
+				value *=  3.28084; // every meter is 3.28 feet		
+				
 			}
 			
 		} else {
-			altitude = "--.--";
+			value = "-.-";
 		}
 		
-		return [altitude.toNumber(), "d"];
+		return [value, "d"];
 	}
+	
+	
+	function Messages(){		
+		return [ settings.notificationCount, "e"];
+	}
+	
 	
 	function Stairs(){
 		return [(info.floorsClimbed == null ?  "-.-" :  info.floorsClimbed), "f"];
 	}
 	
-	function Battery(){
+	
+	function Alarmcount(){
+		return [settings.alarmCount, "g"];
 		
-		return [((Sys.getSystemStats().battery + 0.5).toNumber().toString() + "%"), "g"];
 	}
 	
-	function DateF(){
-		return;
+	
+	function PhoneConn(){
+		
+		if (settings.phoneConnected) {
+			return ["conn", "h" ];
+		} else {
+			return ["dis", "h"];
+		}
 	}
+	
+	
+	function ActiveMinutesDay(){
+			return [info.activeMinutesDay.total.toNumber(), "i"];
+	}
+	
+	
+	function ActiveMinutesWeek(){
+			return [info.activeMinutesWeek.total.toNumber(), "i"];
+	}
+	
+	
+	function Battery(){
+		return [((Sys.getSystemStats().battery + 0.5).toNumber().toString() + "%"), "j"];
+	}
+	
+	function DistanceWeek(){
+		
+	}
+	
+	function DistanceDay(){
+			var unit;
+			value = info.distance.toFloat();
+			if(value == null){
+				value = 0;
+			} else {
+				value *= 0.001;
+			}
+			
+			if (settings.distanceUnits == System.UNIT_METRIC) {
+				unit = "k";					
+			} else {
+				value *=  0.621371;  //mile per K;
+				unit = "Mi";
+			}
+			
+			return [value.format("%.1f").toString() + unit, "k"];
+	}
+	
+	function DeviceTemp() {
+		value = SensorHistory.getTemperatureHistory(null).next();
+		if ((value != null) && (value.data != null)) {
+			if (settings.temperatureUnits == System.UNIT_STATUTE) {
+					value = (value.data * (1.8)) + 32; // Convert to Farenheit: ensure floating point division.
+			}
+			return [value.toNumber().toString() + "°", "m"];
+		}
+		return ["-.-", ""];
+	}
+
 	function EmptyF(){return ["", " "];}
 	
-	function Messages(){		
-		return [ Sys.getDeviceSettings().notificationCount, "e"];
-	}
+
 	
 	function Invalid (){
 		return ["-.-", " "];
 	}
 	
-	function alarmCount(){		
-		return [ Sys.getDeviceSettings().alarmCount, "e"];
-	}
+
 	
 	
 }
