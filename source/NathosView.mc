@@ -20,7 +20,7 @@ class NathosView extends WatchUi.WatchFace
 		var colMIN 	 	 = 0x555555;
 		var colLINE 	 = 0x555555;
 		var colDatafield = 0x555555;
-		var info, data, settings, value, BtInd, zeroformat;
+		var info, data, settings, value, BtInd, zeroformat, weatherUpdateFreq;
 		var barX, barWidth;
 		var iconfont;
 		var twlveclock = false;
@@ -158,6 +158,16 @@ class NathosView extends WatchUi.WatchFace
 				} else{
 					 return method(:Invalid);
 				}
+			} else if (values == 13) {
+				if ((Toybox.System has :ServiceDelegate)) {
+					//if (Autorize() == true){
+						
+						//Background.registerForTemporalEvent(new Time.Duration(app.getProperty("updateFreq") * 60));
+					//}
+					return method(:Weather);
+				} else {
+					 return method(:Invalid);
+				}
 			}
 		}
 		
@@ -166,6 +176,7 @@ class NathosView extends WatchUi.WatchFace
 			scrWidth = dc.getWidth();
 			scrHeight = dc.getHeight();
 			scrRadius = scrWidth / 2;
+			
 			
 			barWidth = scrWidth * 0.7;
 			barX = scrWidth * 0.15;
@@ -308,7 +319,6 @@ class NathosView extends WatchUi.WatchFace
 
 			// Metres (no conversion necessary).
 			if (settings.elevationUnits == System.UNIT_METRIC) {
-				value = value.toNumber();
 			} else { // then its feen
 				value *=  3.28084; // every meter is 3.28 feet		
 				
@@ -318,7 +328,7 @@ class NathosView extends WatchUi.WatchFace
 			value = "-.-";
 		}
 		
-		return [value, "d"];
+		return [value.toNumber(), "d"];
 	}
 	
 	
@@ -395,11 +405,15 @@ class NathosView extends WatchUi.WatchFace
 		}
 		return ["-.-", ""];
 	}
+	
+	function Weather(){
+	
+		
+	}
 
 	function EmptyF(){return ["", " "];}
 	
 
-	
 	function Invalid (){
 		return ["-.-", " "];
 	}

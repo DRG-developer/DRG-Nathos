@@ -1,12 +1,16 @@
 <strings>
     <string id="AppName">DRG Battery</string>    
-    <string id="twelvehclock">use the twelve hour clock</string>    
+    <string id="twelvehclock">use the twelve hour clock</string>  
+    
+      
     <string id="colHour">hour color</string>    
     <string id="colMin">minute color</string>    
     <string id="colLine">seperator color</string>    
     <string id="colBg">background color</string>    
     <string id="colDatafield">datafield colors</string>    
-    <string id="colDate">date color</string>    
+    <string id="colDate">date color</string>  
+    
+      
     <string id="gray">dark gray</string>    
     <string id="lightgray">light gray</string>    
     <string id="white">white</string>    
@@ -18,14 +22,20 @@
     <string id="orange">orange</string>   
     <string id="blue">bue</string>   
     <string id="anotherblue">another blue</string>   
-    <string id="yetanotherblue">yet another blue</string>   
+    <string id="yetanotherblue">yet another blue</string> 
+    
+      
     <string id="showdate">show the date</string>   
     <string id="shortdate">make the date string shorter</string>   
+    
+    
 	<string id="Field1">top left field</string>
 	<string id="Field2">bottom left field</string>
 	<string id="Field3">top right field</string>
 	<string id="Field4">bottom right field</string>
 	<string id="Field5">bottom center field</string>
+	
+	
 	<string id="HeartRate">Current Heartrate</string>
 	<string id="Calories">Calories burned</string>
 	<string id="Steps">Steps</string>
@@ -41,9 +51,25 @@
 	<string id="daydistance">(BUGGED) distance today</string>
 	<string id="devicetemp">ondevice temperature</string>
 	<string id="Empty">show nothing</string>
+	
+	
 	<string id="zeroformat">add a zero when the time is under 10 (09:10 instead of 9:10)</string>
 
 	<string id="BtIndicator"> show a phone connection status the top center</string>
+	
+	<string id="updateFreq">(PREMIUM) how often should weather update?</string>
+	<string id="fiveMin">every five minutes</string>
+	<string id="tenMin">every ten minutes</string>
+	<string id="fifteenMin">every 15 minutes</string>
+	<string id="thirtyMin">every half hour</string>
+	<string id="fourtyFiveMin">every 45 minutes</string>
+	<string id="oneHour">every hour</string>
+	<string id="oneAndAHalfHour">every one and a half hour</string>
+	<string id="twoHour">every 2 hours</string>
+	<string id="twoHalfHour">every 2,5 hours</string>
+	<string id="threeHour">every 3 hours</string>
+	<string id="fourHour">every 4 hours</string>
+	<string id="fiveHour">every 5 hours</string>
     
     
      

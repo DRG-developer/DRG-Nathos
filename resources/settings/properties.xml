@@ -9,6 +9,7 @@
 	<property id="showdate" 	type="boolean">true</property>
 	<property id="shortdate" 	type="boolean">false</property>
 	<property id="tworowdata" 	type="boolean">true</property>
+	<property id="updateFreq" 	type="number">30</property>
 	<property id="Field1"   	type="number">1</property>
 	<property id="Field2"   	type="number">2</property>
 	<property id="Field3"   	type="number">0</property>

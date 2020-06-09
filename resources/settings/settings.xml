@@ -197,6 +197,23 @@
 		</settingConfig>
 	</setting>
 	
+		
+	<setting propertyKey="@Properties.updateFreq" title="@Strings.updateFreq">
+		<settingConfig type="list">
+			<listEntry value="5">@Strings.fiveMin</listEntry>
+			<listEntry value="10">@Strings.tenMin</listEntry>
+			<listEntry value="15">@Strings.fifteenMin</listEntry>
+			<listEntry value="30">@Strings.thirtyMin</listEntry>	
+			<listEntry value="45">@Strings.fourtyFiveMin</listEntry>	
+			<listEntry value="60">@Strings.oneHour</listEntry>	
+			<listEntry value="90">@Strings.oneAndAHalfHour</listEntry>	
+			<listEntry value="120">@Strings.twoHour</listEntry>	
+			<listEntry value="150">@Strings.twoHalfHour</listEntry>	
+			<listEntry value="180">@Strings.threeHour</listEntry>	
+			<listEntry value="240">@Strings.fourHour</listEntry>	
+			<listEntry value="300">@Strings.fiveHour</listEntry>	
+		</settingConfig>
+	</setting>
 	
 	<setting propertyKey="@Properties.twelvehclock" title="@Strings.twelvehclock">
 		<settingConfig type="boolean"></settingConfig>
