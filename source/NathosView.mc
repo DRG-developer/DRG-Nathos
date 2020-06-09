@@ -319,8 +319,10 @@ class NathosView extends WatchUi.WatchFace
 
 			// Metres (no conversion necessary).
 			if (settings.elevationUnits == System.UNIT_METRIC) {
+				//value = value;
 			} else { // then its feen
 				value *=  3.28084; // every meter is 3.28 feet		
+				//value = value.toNumber();	
 				
 			}
 			
