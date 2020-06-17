@@ -16,6 +16,8 @@ using Toybox.ActivityMonitor;
 
 class NathosView extends WatchUi.WatchFace
 {
+		var venuOffset = [0, 0, 1];
+		var sleeping, venuAlwaysOn;
 		var colBG  		 = 0x000000;
 		var colDATE 	 = 0x555555;
 		var colHOUR 	 = 0xFFFFFF;
@@ -72,9 +74,11 @@ class NathosView extends WatchUi.WatchFace
 		}
 		
 		function getSettings(){
+		
 			weatherlookuptable = null;
 			info = ActivityMonitor.getInfo();
 			var app = Application.getApp();
+			venuAlwaysOn = app.getProperty("venuAlwaysOn");
 			colLINE = app.getProperty("colLine");
 			colHOUR = app.getProperty("colHour");
 			colMIN  = app.getProperty("colMin");
@@ -175,7 +179,7 @@ class NathosView extends WatchUi.WatchFace
 											"13d" => "b" /* 61450 */, "13n" => "e" /* 61482 */, // snow
 											"50d" => "e" /* 61441 */, "50n" => "a" /* 61475 */, // mist
 						};
-						weatherfont = WatchUi.loadResource(Rez.Fonts.Weather);
+						weatherfont = WatchUi.loadResource(Rez.Fonts.VWeather);
 						Background.registerForTemporalEvent(new Time.Duration(Application.getApp().getProperty("updateFreq") * 60));
 						return method(:Weather);
 						
@@ -203,68 +207,103 @@ class NathosView extends WatchUi.WatchFace
 					regfont = Graphics.FONT_MEDIUM;
 			}
 			
-			iconfont = WatchUi.loadResource(Rez.Fonts.Icon);
-			hourfont = WatchUi.loadResource(Rez.Fonts.Hour);
-			minutefont = WatchUi.loadResource(Rez.Fonts.Minute);
+			iconfont = WatchUi.loadResource(Rez.Fonts.VIcon);
+			hourfont = 17;//WatchUi.loadResource(Rez.Fonts.Hour);
+			minutefont = 17;//WatchUi.loadResource(Rez.Fonts.Minute);
+		}
+		
+		function venuAlwaysOnUpdate(dc){
+			dc.setColor(colHOUR, -1);			
+			dc.drawText(scrRadius + venuOffset[0], scrRadius - 40 + venuOffset[1], 15, (zeroformat == true ? Sys.getClockTime().hour.format("%02d") : Sys.getClockTime().hour), 0);
+			dc.setColor(colMIN, -1);
+			dc.drawText(scrRadius + venuOffset[0], scrRadius - 40 + venuOffset[1], 15, Sys.getClockTime().min.format("%02d"), 2);
+			if(venuOffset[2] < 3){
+				venuOffset[0] -= 8;
+				venuOffset[1] -= 35;
+				venuOffset[2] ++;
+			} else if (venuOffset[2] < 7){
+				venuOffset[0] += 8;
+				venuOffset[1] += 35;
+				venuOffset[2] ++;
+			} else {
+				venuOffset[0] -= 8;
+				venuOffset[1] -= 35;
+				venuOffset[2] = 0;	
+			}			
+		}
+		
+		function onEnterSleep() {
+				sleeping = true;
+		}
+		
+		function onExitSleep() {
+				sleeping = false;
 		}
 		
 		function onUpdate(dc){
-			dc.setColor(0, colBG);
-			dc.clear();		
-			info     = ActivityMonitor.getInfo();
-			settings = Sys.getDeviceSettings();
-			
-			
-			if(showdate == true){
-				drawDate(dc);
-			}
+			if (sleeping && venuAlwaysOn){
+					dc.setColor(0, 0);
+					dc.clear();
+					venuAlwaysOnUpdate(dc);
+					return;
+			} else {
+				venuOffset = [0, 0, 1];
+				dc.setColor(0, colBG);
+				dc.clear();		
+				info     = ActivityMonitor.getInfo();
+				settings = Sys.getDeviceSettings();
+				
+				
+				if(showdate == true){
+					drawDate(dc);
+				}
 
-			
-			drawTime(dc);
-			drawLine(dc);
-			dc.setColor(colDatafield, -1);
-			if(BtInd == true && settings.phoneConnected){
-				dc.drawText(scrRadius, 15, iconfont, "h", Graphics.TEXT_JUSTIFY_CENTER);
+				
+				drawTime(dc);
+				drawLine(dc);
+				dc.setColor(colDatafield, -1);
+				if(BtInd == true && settings.phoneConnected){
+					dc.drawText(scrRadius, 20, iconfont, "h", Graphics.TEXT_JUSTIFY_CENTER);
+				}
+				
+				drawComplication1(dc);
+				drawComplication2(dc);
+				drawComplication3(dc);
+				drawComplication4(dc);
+				drawBattery(dc);
 			}
-			
-			drawComplication1(dc);
-			drawComplication2(dc);
-			drawComplication3(dc);
-			drawComplication4(dc);
-			drawBattery(dc);
-			
 		}
 		
 		
 		function drawComplication1(dc){	
 			data = methodRight.invoke();
-			dc.drawText(scrRadius - 30, scrRadius + 25, regfont, data[0], Graphics.TEXT_JUSTIFY_RIGHT);
-			dc.drawText(scrRadius - 5, scrRadius + 32, iconfont, data[1], Graphics.TEXT_JUSTIFY_RIGHT);	
-			dc.drawText(scrRadius - 5, scrRadius + 32, weatherfont, data[2], Graphics.TEXT_JUSTIFY_RIGHT);	
+			dc.drawText(scrRadius - 50, scrRadius + 25, regfont, data[0], Graphics.TEXT_JUSTIFY_RIGHT);
+			dc.drawText(scrRadius - 10, scrRadius + 32, iconfont, data[1], Graphics.TEXT_JUSTIFY_RIGHT);	
+			dc.drawText(scrRadius - 10, scrRadius + 32, weatherfont, data[2], Graphics.TEXT_JUSTIFY_RIGHT);	
 		}
 		
 		
 		function drawComplication2(dc){
 			data = methodLeft.invoke();
-			dc.drawText(scrRadius + 30, scrRadius + 25, regfont, data[0], Graphics.TEXT_JUSTIFY_LEFT);
-			dc.drawText(scrRadius + 5, scrRadius + 32, iconfont, data[1], Graphics.TEXT_JUSTIFY_LEFT);
-			dc.drawText(scrRadius + 3, scrRadius + 32, weatherfont, data[2], Graphics.TEXT_JUSTIFY_LEFT);
+			dc.drawText(scrRadius + 50, scrRadius + 25, regfont, data[0], Graphics.TEXT_JUSTIFY_LEFT);
+			dc.drawText(scrRadius + 10, scrRadius + 32, iconfont, data[1], Graphics.TEXT_JUSTIFY_LEFT);
+			dc.drawText(scrRadius + 8, scrRadius + 32, weatherfont, data[2], Graphics.TEXT_JUSTIFY_LEFT);
 		}
 		
 		
 		function drawComplication3(dc){
 			data = methodLeftBottom.invoke();
-			dc.drawText(scrRadius - 30, scrRadius + 48, regfont, data[0], Graphics.TEXT_JUSTIFY_RIGHT);
-			dc.drawText(scrRadius - 5, scrRadius + 55, iconfont, data[1], Graphics.TEXT_JUSTIFY_RIGHT);
-			dc.drawText(scrRadius - 5, scrRadius + 55, weatherfont, data[2], Graphics.TEXT_JUSTIFY_RIGHT);
+			dc.drawText(scrRadius - 50, scrRadius + 63, regfont, data[0], Graphics.TEXT_JUSTIFY_RIGHT);
+			dc.drawText(scrRadius - 10, scrRadius + 70, iconfont, data[1], Graphics.TEXT_JUSTIFY_RIGHT);
+			dc.drawText(scrRadius - 10, scrRadius + 70, weatherfont, data[2], Graphics.TEXT_JUSTIFY_RIGHT);
 		}
 		
 		
 		function drawComplication4(dc){
 			data = methodRightBottom.invoke();
-			dc.drawText(scrRadius + 30, scrRadius + 48, regfont, data[0], Graphics.TEXT_JUSTIFY_LEFT);
-			dc.drawText(scrRadius + 5, scrRadius + 55, iconfont, data[1], Graphics.TEXT_JUSTIFY_LEFT);			
-			dc.drawText(scrRadius + 3, scrRadius + 55, weatherfont, data[2], Graphics.TEXT_JUSTIFY_LEFT);			
+			dc.drawText(scrRadius + 50, scrRadius + 63, regfont, data[0], Graphics.TEXT_JUSTIFY_LEFT);
+			dc.drawText(scrRadius + 10, scrRadius + 70, iconfont, data[1], Graphics.TEXT_JUSTIFY_LEFT);			
+			dc.drawText(scrRadius + 8, scrRadius + 70, weatherfont, data[2], Graphics.TEXT_JUSTIFY_LEFT);			
 		}
 		
 	
@@ -276,7 +315,7 @@ class NathosView extends WatchUi.WatchFace
 		
 		function drawBattery(dc){
 				data = methodBottomCenter.invoke();
-				dc.drawText(scrRadius, scrWidth - 30, regfont, data[0], Graphics.TEXT_JUSTIFY_CENTER);
+				dc.drawText(scrRadius, scrWidth - 40, regfont, data[0], Graphics.TEXT_JUSTIFY_CENTER);
 				data = null;
 		}
 		 
@@ -289,9 +328,9 @@ class NathosView extends WatchUi.WatchFace
 			if (zeroformat == true){
 				tmp = tmp.format("%02d");
 			}
-			dc.drawText(scrRadius -2, scrRadius - 60, hourfont, tmp, Graphics.TEXT_JUSTIFY_RIGHT);
+			dc.drawText(scrRadius -2, scrRadius - 110, hourfont, tmp, Graphics.TEXT_JUSTIFY_RIGHT);
 			dc.setColor(colMIN, -1);
-			dc.drawText(scrRadius + 2, scrRadius - 60, minutefont, time.min.format("%02d"), Graphics.TEXT_JUSTIFY_LEFT);
+			dc.drawText(scrRadius + 2, scrRadius - 110, minutefont, time.min.format("%02d"), Graphics.TEXT_JUSTIFY_LEFT);
 			time = null; tmp = null;
 		}
 		
@@ -300,7 +339,7 @@ class NathosView extends WatchUi.WatchFace
 			var datestring,time;
 			time = Gregorian.info(Time.now(), Time.FORMAT_SHORT); 
 			datestring = dayOfWeekArr[time.day_of_week] + " " + monthOfYearArr[time.month] + " " + time.day;
-			dc.drawText(scrRadius, scrRadius - 80, regfont, datestring ,Graphics.TEXT_JUSTIFY_CENTER);
+			dc.drawText(scrRadius, scrRadius -140, regfont, datestring ,Graphics.TEXT_JUSTIFY_CENTER);
 			time = null; datestring = null;
 		}
 		

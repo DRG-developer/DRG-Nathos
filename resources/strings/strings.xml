@@ -1,5 +1,5 @@
 <strings>
-    <string id="AppName">DRG Battery</string>    
+    <string id="AppName">DRG Nathos</string>    
     <string id="twelvehclock">use the twelve hour clock</string>  
     
       
@@ -10,6 +10,13 @@
     <string id="colDatafield">datafield colors</string>    
     <string id="colDate">date color</string>  
     
+    <string id="noGPSIndicator">What to do when there's no last known gps location?</string> 
+    <string id="nogps1">don't update the weather</string> 
+    <string id="nogps2">fallback to a fixed gps location (enter at the bottom of the page)</string> 
+    
+    
+    <string id="gpsFallback">enter fallback location. longitude</string> 
+    <string id="gpsFallback">enter fallback location. lattitude</string> 
       
     <string id="gray">dark gray</string>    
     <string id="lightgray">light gray</string>    
@@ -22,18 +29,25 @@
     <string id="orange">orange</string>   
     <string id="blue">bue</string>   
     <string id="anotherblue">another blue</string>   
-    <string id="yetanotherblue">yet another blue</string> 
+    <string id="yetanotherblue">yet another blue</string>
+    
+     
+    <string id="venuAlwaysOn">VENU: have the screen always on?</string> 
     
       
     <string id="showdate">show the date</string>   
     <string id="shortdate">make the date string shorter</string>   
     
     
-	<string id="Field1">top left field</string>
-	<string id="Field2">bottom left field</string>
-	<string id="Field3">top right field</string>
-	<string id="Field4">bottom right field</string>
+	<string id="fieldTopLeft">top left field</string>
+	<string id="fieldTopRight">top right fieldd</string>
+	<string id="fieldBottomLeft">bottom left field</string>
+	<string id="fieldBottomRight">bottom right field</string>
 	<string id="Field5">bottom center field</string>
+	
+	
+	<string id="key2">premium activation key </string>
+
 	
 	
 	<string id="HeartRate">Current Heartrate</string>
@@ -51,6 +65,8 @@
 	<string id="daydistance">(BUGGED) distance today</string>
 	<string id="devicetemp">ondevice temperature</string>
 	<string id="Empty">show nothing</string>
+	<string id="weather">(BETA and PREMIUM) weather</string>
+
 	
 	
 	<string id="zeroformat">add a zero when the time is under 10 (09:10 instead of 9:10)</string>

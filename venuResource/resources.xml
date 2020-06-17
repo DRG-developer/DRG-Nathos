@@ -1,0 +1,9 @@
+<resources>
+    <fonts>
+        <font id="VHour" antialias="true" filename="fonts/90px-ariel-bold.fnt" filter="0123456789" />
+        <font id="VMinute" antialias="true" filename="fonts/90px-ariel.fnt" filter="0123456789" />
+        <font id="VIcon" antialias="true" filename="fonts/venuIcons.fnt" filter="abcdefghijkm " />
+        <font id="VWeather" antialias="true" filename="fonts/venuWeather.fnt" filter="abcdefghi " />
+        <font id="inheritWeather"  filename="fonts/inheritWeather.fnt" filter=" " />
+    </fonts>
+</resources>

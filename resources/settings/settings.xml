@@ -1,4 +1,17 @@
-<settings>	
+<settings>
+	
+	<setting propertyKey="@Properties.keys" title="@Strings.key2">
+		<settingConfig type="alphaNumeric"></settingConfig>
+	</setting>
+	
+	
+	<setting propertyKey="@Properties.noGPSIndicator" title="@Strings.noGPSIndicator">
+		<settingConfig type="list">
+			<listEntry value="1">@Strings.nogps1</listEntry>
+			<listEntry value="2">@Strings.nogps2</listEntry>
+		</settingConfig>
+	</setting>
+		
 	<setting propertyKey="@Properties.colHour" title="@Strings.colHour">
 		<settingConfig type="list">
 			<listEntry value="0">@Strings.black</listEntry>
@@ -102,7 +115,7 @@
 	</setting>
 	
 	
-	<setting propertyKey="@Properties.Field1" title="@Strings.Field1">
+	<setting propertyKey="@Properties.Field1" title="@Strings.fieldTopLeft">
 		<settingConfig type="list">
 			<listEntry value="-1">@Strings.Empty</listEntry>	
 			<listEntry value="0">@Strings.HeartRate</listEntry>	
@@ -118,10 +131,11 @@
 			<listEntry value="10">@Strings.ActiveMinWeek</listEntry>		
 			<listEntry value="11">@Strings.daydistance</listEntry>	
 			<listEntry value="12">@Strings.devicetemp</listEntry>
+			<listEntry value="13">@Strings.weather</listEntry>
 		</settingConfig>
 	</setting>
 	
-	<setting propertyKey="@Properties.Field2" title="@Strings.Field2">
+	<setting propertyKey="@Properties.Field2" title="@Strings.fieldTopRight">
 		<settingConfig type="list">
 			<listEntry value="-1">@Strings.Empty</listEntry>	
 			<listEntry value="0">@Strings.HeartRate</listEntry>	
@@ -137,10 +151,11 @@
 			<listEntry value="10">@Strings.ActiveMinWeek</listEntry>		
 			<listEntry value="11">@Strings.daydistance</listEntry>	
 			<listEntry value="12">@Strings.devicetemp</listEntry>	
+			<listEntry value="13">@Strings.weather</listEntry>	
 		</settingConfig>
 	</setting>
 	
-	<setting propertyKey="@Properties.Field3" title="@Strings.Field3">
+	<setting propertyKey="@Properties.Field3" title="@Strings.fieldBottomLeft">
 		<settingConfig type="list">
 			<listEntry value="-1">@Strings.Empty</listEntry>	
 			<listEntry value="0">@Strings.HeartRate</listEntry>
@@ -156,10 +171,11 @@
 			<listEntry value="10">@Strings.ActiveMinWeek</listEntry>		
 			<listEntry value="11">@Strings.daydistance</listEntry>
 			<listEntry value="12">@Strings.devicetemp</listEntry>	
+			<listEntry value="13">@Strings.weather</listEntry>	
 		</settingConfig>
 	</setting>
 	
-	<setting propertyKey="@Properties.Field4" title="@Strings.Field4">
+	<setting propertyKey="@Properties.Field4" title="@Strings.fieldBottomRight">
 		<settingConfig type="list">
 			<listEntry value="-1">@Strings.Empty</listEntry>
 			<listEntry value="0">@Strings.HeartRate</listEntry>	
@@ -175,6 +191,7 @@
 			<listEntry value="10">@Strings.ActiveMinWeek</listEntry>		
 			<listEntry value="11">@Strings.daydistance</listEntry>	
 			<listEntry value="12">@Strings.devicetemp</listEntry>		
+			<listEntry value="13">@Strings.weather</listEntry>		
 		</settingConfig>
 	</setting>
 	
@@ -194,6 +211,7 @@
 			<listEntry value="10">@Strings.ActiveMinWeek</listEntry>		
 			<listEntry value="11">@Strings.daydistance</listEntry>		
 			<listEntry value="12">@Strings.devicetemp</listEntry>		
+			<listEntry value="13">@Strings.weather</listEntry>		
 		</settingConfig>
 	</setting>
 	
@@ -235,6 +253,11 @@
 		<settingConfig type="boolean"></settingConfig>
 	</setting>
 	
+	<setting propertyKey="@Properties.venuAlwaysOn" title="@Strings.venuAlwaysOn">
+		<settingConfig type="boolean"></settingConfig>
+	</setting>
+	
+
 	
 	
 	

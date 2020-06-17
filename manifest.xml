@@ -46,6 +46,8 @@
 			<!-- tatctix series -->
             <iq:product id="d2charlie"/> <!-- tested in sim -->
             <iq:product id="d2delta"/> <!-- tested in sim -->
+            <iq:product id="d2bravo"/> <!-- tested in sim -->
+            <iq:product id="d2bravo_titanium"/> <!-- tested in sim -->
             <iq:product id="d2deltapx"/> <!-- tested in sim -->
             <iq:product id="d2deltas"/> <!-- tested in sim -->
             
@@ -67,6 +69,7 @@
             <iq:product id="fr245"/>  <!-- tested in sim -->
             <iq:product id="fr235"/>  <!-- tested in sim -->
             <iq:product id="fr230"/>  <!-- tested in sim -->
+            <iq:product id="fr45"/>  <!-- tested in sim -->
 	          
             
             
@@ -85,6 +88,8 @@
 			
 			<!--  misc-->
 			<iq:product id="fenixchronos"/> <!-- tested in sim -->
+			<iq:product id="venu"/> <!-- tested in sim -->
+			<iq:product id="garminswim2"/> <!-- tested in sim -->
 		
 			
 		
@@ -92,7 +97,9 @@
         </iq:products>
         <iq:permissions>
               <iq:uses-permission id="SensorHistory"/>
-         
+              <iq:uses-permission id="Background"/>
+              <iq:uses-permission id="Communications"/>
+              <iq:uses-permission id="Positioning"/>
         </iq:permissions>
         <iq:languages>
             <iq:language>eng</iq:language>

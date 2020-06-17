@@ -1,1 +1,25 @@
 project.manifest = manifest.xml
+
+base.sourcePath = source
+
+fenix3.resourcePath = $(fenix3.resourcePath);noHrResource
+fr230.resourcePath = $(fr230.resourcePath);noHrResource
+fr630.resourcePath = $(fr630.resourcePath);noHrResource
+approachs60.resourcePath = $(approachs60.resourcePath);noHrResource
+d2bravo.resourcePath = $(d2bravo.resourcePath);noHrResource
+
+fr245.resourcePath = $(fr245.resourcePath);noAltitudeResource
+fr245m.resourcePath = $(fr245m.resourcePath);noAltitudeResource
+fr235.resourcePath = $(fr235.resourcePath);noAltitudeResource
+fr735xt.resourcePath = $(fr735xt.resourcePath);noAltitudeResource
+
+
+approachs62.resourcePath = $(approachs62.resourcePath);noAltitudeResource
+
+fenix3_hr.resourcePath = $(fenix3_hr.resourcePath);noAltitudeResource
+d2bravo_titanium.resourcePath = $(d2bravo_titanium.resourcePath);noAltitudeResource
+garminswim2.resourcePath = $(garminswim2.resourcePath);resources-fr45
+
+venu.sourcePath = venuSource
+venu.resourcePath = $(venu.resourcePath);venuResource
+
