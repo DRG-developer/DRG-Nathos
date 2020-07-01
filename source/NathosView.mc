@@ -27,6 +27,7 @@ class NathosView extends WatchUi.WatchFace
 		var iconfont;
 		var twlveclock = false;
 		var showdate = true;
+		var BattStats;
 		
 		/* ICONS MAPPER*/
 		
@@ -182,7 +183,11 @@ class NathosView extends WatchUi.WatchFace
 					} else {
 						return method(:Premium);
 					}
-				} else {return method(:Invalid);}
+				}
+			} else if (values == 14) {
+				return method(:Invalid);
+			} else {
+				return method(:Invalid);
 			}
 		}
 		
@@ -219,7 +224,8 @@ class NathosView extends WatchUi.WatchFace
 				drawDate(dc);
 			}
 
-			
+		
+	
 			drawTime(dc);
 			drawLine(dc);
 			dc.setColor(colDatafield, -1);
@@ -312,21 +318,15 @@ class NathosView extends WatchUi.WatchFace
 			var tmpString = Application.getApp().getProperty("keys");
 			if (tmpString == null) {return false;}
 			if (tmpString.hashCode() == null) {return false;}
-			
-
 			 
 			
 			if (tmpString.hashCode()  == -1258539636) {
-	
 				return true;
 			} else if (tmpString.hashCode() == -55185590){
-				
 				return true;
 			} else {
-				
 				return false;
 			}	
-		
 		}
 		
 	
@@ -346,60 +346,56 @@ class NathosView extends WatchUi.WatchFace
 		if(value == null) {
 			value = ActivityMonitor.getHeartRateHistory(1, true).next().heartRate;
 		}
-		return [value, "a", " "];
+		return [value, "a", ""];
 	}
 	
 	
 	function Calories(){
-		return [info.calories, "b", " " ];
+		return [info.calories, "b", "" ];
 	}
 	
 	
 	function Steps(){
-		return [info.steps , "c", " "];
+		return [info.steps , "c", ""];
 	}
 	
 
 	function Altitude(){
 		var value = Activity.getActivityInfo().altitude;
 		if(value == null){
-			 value = SensorHistory.getElevationHistory({ :period => 1, :order => SensorHistory.ORDER_NEWEST_FIRST })
-						.next();
+			 value = SensorHistory.getElevationHistory({ :period => 1, :order => SensorHistory.ORDER_NEWEST_FIRST }).next();
 			if ((value != null) && (value.data != null)) {
 					value = value.data;
 			}
 		}
+		
 		if (value != null) {
-
 			// Metres (no conversion necessary).
 			if (settings.elevationUnits == System.UNIT_METRIC) {
-				//value = value;
-			} else { // then its feen
+			} else { 
 				value *=  3.28084; // every meter is 3.28 feet		
-				//value = value.toNumber();	
-				
 			}
 			
 		} else {
 			value = "-.-";
 		}
 		
-		return [value.toNumber(), "d", " "];
+		return [value.toNumber(), "d", ""];
 	}
 	
 	
 	function Messages(){		
-		return [ settings.notificationCount, "e", " "];
+		return [ settings.notificationCount, "e", ""];
 	}
 	
 	
 	function Stairs(){
-		return [(info.floorsClimbed == null ?  "-.-" :  info.floorsClimbed), "f", " "];
+		return [(info.floorsClimbed == null ?  "-.-" :  info.floorsClimbed), "f", ""];
 	}
 	
 	
 	function Alarmcount(){
-		return [settings.alarmCount, "g", " "];
+		return [settings.alarmCount, "g", ""];
 		
 	}
 	
@@ -407,25 +403,25 @@ class NathosView extends WatchUi.WatchFace
 	function PhoneConn(){
 		
 		if (settings.phoneConnected) {
-			return ["conn", "h", " " ];
+			return ["conn", "h", "" ];
 		} else {
-			return ["dis", "h", " "];
+			return ["dis", "h", ""];
 		}
 	}
 	
 	
 	function ActiveMinutesDay(){
-			return [info.activeMinutesDay.total.toNumber(), "i", " "];
+			return [info.activeMinutesDay.total.toNumber(), "i", ""];
 	}
 	
 	
 	function ActiveMinutesWeek(){
-			return [info.activeMinutesWeek.total.toNumber(), "i", " "];
+			return [info.activeMinutesWeek.total.toNumber(), "i", ""];
 	}
 	
 	
 	function Battery(){
-		return [((Sys.getSystemStats().battery + 0.5).toNumber().toString() + "%"), "j", " "];
+		return [((Sys.getSystemStats().battery + 0.5).toNumber().toString() + "%"), "j", ""];
 	}
 	
 	function DistanceWeek(){
@@ -448,7 +444,7 @@ class NathosView extends WatchUi.WatchFace
 				unit = "Mi";
 			}
 			
-			return [value.format("%.1f").toString() + unit, "k", " "];
+			return [value.format("%.1f").toString() + unit, "k", ""];
 	}
 	
 	function DeviceTemp() {
@@ -460,7 +456,7 @@ class NathosView extends WatchUi.WatchFace
 					value = value.data;
 			}
 		
-			return [value.toNumber().toString() + "°", "m", " "];
+			return [value.toNumber().toString() + "°", "m", ""];
 		}
 		return ["-.-", ""];
 	}
@@ -481,26 +477,35 @@ class NathosView extends WatchUi.WatchFace
 						Application.getApp().setProperty("lon", (location[1].toFloat()) );
 				}
 		}
-		if(bgData == null ){
-			return ["noData", " ", "i"];
-		}
-
 		
-		return [bgData["temp"].toNumber() + "°", " ", weatherlookuptable[bgData["icon"]] ];
+		
+	
+		//var weatherdata = Application.getApp().getProperty("weather");
+		if (bgData == null) {
+			return ["noData", "", "i"];
+		} 
+		
+		
+		return [bgData["temp"].toNumber() + "°", "", weatherlookuptable[bgData["icon"]] ];
+	
+	
 	}
 
 	function EmptyF(){
-		return ["", " ", " "];
+		return ["", "", ""];
 	}
 	
 
 	function Invalid (){
-		return ["-.-", " ", " "];
+		return ["-.-", "", ""];
 	}
 	
 	function Premium (){
-		return ["activate!", " ", " "];
+		return ["activate!", "", ""];
 	}
+	
+
+	
 	
 
 	

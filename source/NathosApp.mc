@@ -7,7 +7,7 @@ using Toybox.System as Sys;
 // This is the primary entry point of the application.
 class NathosWatch extends Application.AppBase
 {
-	var counter, cache;
+	var counter = 0;
 	var View;
     function initialize() {
         AppBase.initialize();
@@ -33,15 +33,15 @@ class NathosWatch extends Application.AppBase
 	}
 	
 	function onBackgroundData(data){
-		Sys.println(data);
-		if(data["response"] == 200){
+		//Sys.println(data);
+		if(data["response"] == 200 ){
 			counter = 0;
-			cache = data["weatherdata"];
 			View.bgData = data["weatherdata"];
 		} else if ( counter < 3){
-			View.bgData = cache;
 			counter ++;
-		} 
+		} else {
+			Application.getApp().setProperty("weather", null);
+		}
 	}
 	
 	function getServiceDelegate() {

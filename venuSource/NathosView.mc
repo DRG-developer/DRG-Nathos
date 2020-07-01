@@ -29,6 +29,7 @@ class NathosView extends WatchUi.WatchFace
 		var iconfont;
 		var twlveclock = false;
 		var showdate = true;
+		var BattStats;
 		
 		/* ICONS MAPPER*/
 		
@@ -183,10 +184,13 @@ class NathosView extends WatchUi.WatchFace
 						Background.registerForTemporalEvent(new Time.Duration(Application.getApp().getProperty("updateFreq") * 60));
 						return method(:Weather);
 						
-					} else {
-						return method(:Premium);
-					}
-				} else {return method(:Invalid);}
+						} else {
+							return method(:Premium);
+						}
+					} else {return method(:Invalid);}
+				
+			} else if (values == 14) {
+				return method(:Invalid);
 			}
 		}
 		
@@ -214,7 +218,11 @@ class NathosView extends WatchUi.WatchFace
 		
 		function venuAlwaysOnUpdate(dc){
 			dc.setColor(colHOUR, -1);			
-			dc.drawText(scrRadius + venuOffset[0], scrRadius - 40 + venuOffset[1], 15, (zeroformat == true ? Sys.getClockTime().hour.format("%02d") : Sys.getClockTime().hour), 0);
+			var hour = Sys.getClockTime().hour;
+			if(hour > 13 && twlveclock == true) {
+				hour = hour - 12;
+			}
+			dc.drawText(scrRadius + venuOffset[0], scrRadius - 40 + venuOffset[1], 15, (zeroformat == true ? hour.format("%02d") : hour), 0);
 			dc.setColor(colMIN, -1);
 			dc.drawText(scrRadius + venuOffset[0], scrRadius - 40 + venuOffset[1], 15, Sys.getClockTime().min.format("%02d"), 2);
 			if(venuOffset[2] < 3){
@@ -520,6 +528,7 @@ class NathosView extends WatchUi.WatchFace
 						Application.getApp().setProperty("lon", (location[1].toFloat()) );
 				}
 		}
+		//var tmp = Application.getApp().getProperty("weather");
 		if(bgData == null ){
 			return ["noData", " ", "i"];
 		}
@@ -542,6 +551,6 @@ class NathosView extends WatchUi.WatchFace
 	}
 	
 
-	
+
 	
 }

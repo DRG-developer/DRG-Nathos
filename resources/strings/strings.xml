@@ -39,9 +39,9 @@
     <string id="shortdate">make the date string shorter</string>   
     
     
-	<string id="fieldTopLeft">top left field</string>
-	<string id="fieldTopRight">top right fieldd</string>
-	<string id="fieldBottomLeft">bottom left field</string>
+	<string id="fieldTopLeft">top right field</string>
+	<string id="fieldTopRight">bottom left field </string>
+	<string id="fieldBottomLeft">top left field</string>
 	<string id="fieldBottomRight">bottom right field</string>
 	<string id="Field5">bottom center field</string>
 	
@@ -65,7 +65,8 @@
 	<string id="daydistance">(BUGGED) distance today</string>
 	<string id="devicetemp">ondevice temperature</string>
 	<string id="Empty">show nothing</string>
-	<string id="weather">(BETA and PREMIUM) weather</string>
+	<string id="weather">(PREMIUM) weather</string>
+	<string id="battDays">battery in days</string>
 
 	
 	
