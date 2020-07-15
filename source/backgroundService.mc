@@ -22,10 +22,14 @@ class NathosServiceDelegate extends Toybox.System.ServiceDelegate{
     }
     (:background_method)
     function getWeather(){
-		var lat, lon;
+		var lat, lon, app;
+		app = Application.getApp();
 	
-		lat = Application.getApp().getProperty("lat");
-		lon = Application.getApp().getProperty("lon");
+		lat = app.getProperty("lat");
+		lon = app.getProperty("lon");
+		
+		app = null;
+		
 	
 		Comms.makeWebRequest("https://api.openweathermap.org/data/2.5/weather", 
 					/*
