@@ -28,6 +28,7 @@ class NathosView extends WatchUi.WatchFace
 		var twlveclock = false;
 		var showdate = true;
 		var BattStats;
+		var manualLoc = false;
 		
 		/* ICONS MAPPER*/
 		
@@ -86,7 +87,12 @@ class NathosView extends WatchUi.WatchFace
 			showdate     = app.getProperty("showdate");
 			BtInd        = app.getProperty("BtIndicator");
 			zeroformat   = app.getProperty("zeroformat");
-		    methodLeft         = getField(app.getProperty("Field1"));
+			manualLoc    = app.getProperty("unknown");
+			if (manualLoc) {
+			    app.setProperty("lon", app.getProperty("fixedLon"));
+			    app.setProperty("lat", app.getProperty("fixedLon"));
+			}
+		        methodLeft         = getField(app.getProperty("Field1"));
 			methodLeftBottom   = getField(app.getProperty("Field2"));
 			methodRight        = getField(app.getProperty("Field3"));
 			methodRightBottom  = getField(app.getProperty("Field4"));
@@ -464,18 +470,19 @@ class NathosView extends WatchUi.WatchFace
 	function Weather(){
 		var location = Activity.getActivityInfo().currentLocation; 
 
-		
-		if (location != null) {
-				location = location.toDegrees(); // Array of Doubles.
-				Application.getApp().setProperty("lat", (location[0].toFloat()) );
-				Application.getApp().setProperty("lon", (location[1].toFloat()) );
-		} else {
-				location = Position.getInfo().position;
-				if (location != null) {
+		if (!manualLoc) {
+		    if (location != null) {
+				    location = location.toDegrees(); // Array of Doubles.
+				    Application.getApp().setProperty("lat", (location[0].toFloat()) );
+				    Application.getApp().setProperty("lon", (location[1].toFloat()) );
+		    } else {
+				    location = Position.getInfo().position;
+				    if (location != null) {
 						location = location.toDegrees();
 						Application.getApp().setProperty("lat", (location[0].toFloat()) );
-						Application.getApp().setProperty("lon", (location[1].toFloat()) );
-				}
+					    	Application.getApp().setProperty("lon", (location[1].toFloat()) );
+				    }
+		    }
 		}
 		
 		
