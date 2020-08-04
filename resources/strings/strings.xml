@@ -10,9 +10,7 @@
     <string id="colDatafield">datafield colors</string>    
     <string id="colDate">date color</string>  
     
-    <string id="noGPSIndicator">What to do when there's no last known gps location?</string> 
-    <string id="nogps1">don't update the weather</string> 
-    <string id="nogps2">fallback to a fixed gps location (enter at the bottom of the page)</string> 
+    <string id="nogpsfallback">when no gps, fallback to a fixed gps location?</string> 
     
     
     <string id="gpsFallback">enter fallback location. longitude</string> 
