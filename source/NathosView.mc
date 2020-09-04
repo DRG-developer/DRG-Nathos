@@ -163,7 +163,7 @@ class NathosView extends WatchUi.WatchFace
 				}
 			} else if (values == 13) {
 				if ((Toybox.System has :ServiceDelegate)) {
-					if (Authorize() != true){
+					if (Authorize() == true){
 						
 						weatherfont = WatchUi.loadResource(Rez.Fonts.Weather);
 						Background.registerForTemporalEvent(new Time.Duration(Application.getApp().getProperty("updateFreq") * 60));
