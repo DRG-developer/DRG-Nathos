@@ -163,7 +163,7 @@ class NathosView extends WatchUi.WatchFace
 				}
 			} else if (values == 13) {
 				if ((Toybox.System has :ServiceDelegate)) {
-					if (Authorize() == true){
+					if (Authorize() != true){
 						
 						weatherfont = WatchUi.loadResource(Rez.Fonts.Weather);
 						Background.registerForTemporalEvent(new Time.Duration(Application.getApp().getProperty("updateFreq") * 60));
@@ -335,6 +335,9 @@ class NathosView extends WatchUi.WatchFace
 		if(value == null) {
 			value = ActivityMonitor.getHeartRateHistory(1, true).next().heartRate;
 		}
+		if (value == 255) {
+			value = "-.-";
+		}
 		return [value, "a", ""];
 	}
 	
@@ -473,8 +476,7 @@ class NathosView extends WatchUi.WatchFace
 		if (weatherdata == null) {
 			return ["noData", "", "i"];
 		} 
-		
-		
+	
 		return [weatherdata["temp"].toNumber() + "°", "", weatherdata["icon"] ];
 	
 	

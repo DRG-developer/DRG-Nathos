@@ -26,6 +26,8 @@ class NathosServiceDelegate extends Toybox.System.ServiceDelegate{
 	
 		lat = Application.getApp().getProperty("lat");
 		lon = Application.getApp().getProperty("lon");
+		Sys.println(lat);
+		Sys.println(lon);
 		
 	
 		Comms.makeWebRequest("https://api.openweathermap.org/data/2.5/weather", 
@@ -59,6 +61,7 @@ class NathosServiceDelegate extends Toybox.System.ServiceDelegate{
 	
 	(:background_method)
 	function onReceiveWeatherdata(response, data){
+		Sys.println("got a Weather Response");
 		if(response != 200){
 			Sys.println(response);
 			Background.exit({"response" => response});
@@ -83,6 +86,8 @@ class NathosServiceDelegate extends Toybox.System.ServiceDelegate{
 				"humidity" => data["main"]["humidity"],
 				"icon" => weatherlookuptable[data["weather"][0]["icon"]]
 			};
+			Sys.println("result from background");
+			Sys.println(result);
 			Background.exit([response, result]);
 		}
 	}

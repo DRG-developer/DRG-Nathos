@@ -33,7 +33,8 @@ class NathosWatch extends Application.AppBase
 	}
 	
 	function onBackgroundData(data){
-		//Sys.println(data);
+		Sys.println(data);
+		Sys.println(data[1]);
 		if(data[0] == 200 ){
 			Application.getApp().setProperty("weatherdata", data[1]);
 			counter = 0;

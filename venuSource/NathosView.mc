@@ -24,7 +24,7 @@ class NathosView extends WatchUi.WatchFace
 		var colMIN 	 	 = 0x555555;
 		var colLINE 	 = 0x555555;
 		var colDatafield = 0x555555;
-		var info, data, settings, value, BtInd, zeroformat, bgData, weatherlookuptable;
+		var info, data, settings, value, BtInd, zeroformat;
 		var barX, barWidth;
 		var iconfont;
 		var twlveclock = false;
@@ -76,7 +76,6 @@ class NathosView extends WatchUi.WatchFace
 		
 		function getSettings(){
 		
-			weatherlookuptable = null;
 			info = ActivityMonitor.getInfo();
 			var app = Application.getApp();
 			venuAlwaysOn = app.getProperty("venuAlwaysOn");
@@ -169,17 +168,6 @@ class NathosView extends WatchUi.WatchFace
 			} else if (values == 13) {
 				if ((Toybox.System has :ServiceDelegate)) {
 					if (Authorize() == true){
-						weatherlookuptable = {// Day icon               Night icon                Description
-											"01d" => "h" /* 61453 */, "01n" => "f" /* 61486 */, // clear sky
-											"02d" => "d" /* 61452 */, "02n" => "g" /* 61569 */, // few clouds
-											"03d" => "f" /* 61442 */, "03n" => "h" /* 61574 */, // scattered clouds
-											"04d" => "f" /* 61459 */, "04n" => "I" /* 61459 */, // broken clouds: day and night use same icon
-											"09d" => "c" /* 61449 */, "09n" => "d" /* 61481 */, // shower rain
-											"10d" => "g" /* 61448 */, "10n" => "c" /* 61480 */, // rain
-											"11d" => "a" /* 61445 */, "11n" => "b" /* 61477 */, // thunderstorm
-											"13d" => "b" /* 61450 */, "13n" => "e" /* 61482 */, // snow
-											"50d" => "e" /* 61441 */, "50n" => "a" /* 61475 */, // mist
-						};
 						weatherfont = WatchUi.loadResource(Rez.Fonts.VWeather);
 						Background.registerForTemporalEvent(new Time.Duration(Application.getApp().getProperty("updateFreq") * 60));
 						return method(:Weather);
@@ -393,6 +381,9 @@ class NathosView extends WatchUi.WatchFace
 		if(value == null) {
 			value = ActivityMonitor.getHeartRateHistory(1, true).next().heartRate;
 		}
+		if (value == 255) {
+			value = "-.-";
+		}
 		return [value, "a", " "];
 	}
 	
@@ -528,13 +519,13 @@ class NathosView extends WatchUi.WatchFace
 						Application.getApp().setProperty("lon", (location[1].toFloat()) );
 				}
 		}
-		//var tmp = Application.getApp().getProperty("weather");
-		if(bgData == null ){
+		var tmp = Application.getApp().getProperty("weatherdata");
+		if(tmp == null ){
 			return ["noData", " ", "i"];
 		}
 
 		
-		return [bgData["temp"].toNumber() + "°", " ", weatherlookuptable[bgData["icon"]] ];
+		return [tmp["temp"].toNumber().toString() + "°", " ", tmp["icon"]];
 	}
 
 	function EmptyF(){

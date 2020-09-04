@@ -34,13 +34,13 @@ class NathosWatch extends Application.AppBase
 	
 	function onBackgroundData(data){
 		Sys.println(data);
-		if(data["response"] == 200){
+		if(data[0] == 200){
 			counter = 0;
-			View.bgData = data["weatherdata"];
+			Application.getApp().setProperty("weatherdata", data[1]);
 		} else if ( counter < 3){
 			counter ++;
 		} else {
-			View.bgData = null;
+			Application.getApp().setProperty("weatherdata", null);
 		}
 	}
 	
