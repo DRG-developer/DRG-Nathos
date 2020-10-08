@@ -55,7 +55,7 @@ class NathosView extends WatchUi.WatchFace
 		
 		var dayOfWeekArr    = [null, "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
 		var monthOfYearArr  = [null, "January", "February", "March", "April", "May", "June", "July",
-							         "August", "September", "Octotber", "November", "December"];
+							         "August", "September", "October", "November", "December"];
 		
 		
 		
